@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Programación</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .card-description {
+            color: #666;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        .card:nth-child(1) .card-icon { color: #667eea; }
+        .card:nth-child(2) .card-icon { color: #f093fb; }
+        .card:nth-child(3) .card-icon { color: #4facfe; }
+        .card:nth-child(4) .card-icon { color: #43e97b; }
+        .card:nth-child(5) .card-icon { color: #fa709a; }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .cards-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ejercicios de Programación</h1>
+        
+        <div class="cards-container">
+
+            <a href="./pages/Frutas1.html" class="card">
+                <span class="card-icon"></span>
+                <h3 class="card-title">Arreglo de frutas</h3>
+                <p class="card-description">Dada una cantidad de frutas habrá un arreglo</p>
+            </a>
+
+            <a href="./pages/Numero2.html" class="card">
+                <span class="card-icon">1,2=>1,2,3</span>
+                <h3 class="card-title">Arreglo de números</h3>
+                <p class="card-description">Mostrar el siguiente</p>
+            </a>
+
+            <a href="./pages/Numero3.html" class="card">
+                <span class="card-icon">10=>10,20</span>
+                <h3 class="card-title">Arreglo de números</h3>
+                <p class="card-description">Mostrar el siguiente</p>
+            </a>
+
+            <a href="./pages/Cadena4.html" class="card">
+                <span class="card-icon"></span>
+                <h3 class="card-title">Imprimir mensaje</h3>
+                <p class="card-description">Dado el mesaje se imprimira</p>
+            </a>
+
+            <a href="./pages/CCadena5.html" class="card">
+                <span class="card-icon"></span>
+                <h3 class="card-title">Número de letras</h3>
+                <p class="card-description">Dada una palabra, mostrár la cantidad de letras</p>
+            </a>
+
+            <a href="./pages/Letra6.html" class="card">
+                <span class="card-icon"></span>
+                <h3 class="card-title">Arreglo de palabras</h3>
+                <p class="card-description">Dada una palabra habrá un arreglo</p>
+            </a>
+
+            <a href="./pages/Letra7.html" class="card">
+                <span class="card-icon"></span>
+                <h3 class="card-title">Arreglo de palabra</h3>
+                <p class="card-description">Dada una palabra habrá un arreglo</p>
+            </a>
+
+            <a href="./pages/Números8.html" class="card">
+                <span class="card-icon">1;2 => 1,2</span>
+                <h3 class="card-title">Arreglo de números</h3>
+                <p class="card-description">Dada una cantidad de números habrá un arreglo</p>
+            </a>
+
+            <a href="./pages/Frutas9.html" class="card">
+                <span class="card-icon"></span>
+                <h3 class="card-title">Arreglo de frutas (for)</h3>
+                <p class="card-description">Dada una cantidad de frutas habrá un arreglo</p>
+            </a>
+
+            <a href="./pages/Frutas10.html" class="card">
+                <span class="card-icon"></span>
+                <h3 class="card-title">Arreglo de frutas (while)</h3>
+                <p class="card-description">Dada una cantidad de frutas habrá un arreglo</p>
+            </a>
+
+            <a href="./pages/LCadena11.html" class="card">
+                <span class="card-icon">sol = 3</span>
+                <h3 class="card-title">Cantida de letras (for)</h3>
+                <p class="card-description">Dada una palabra, mostras la cantidad de letras</p>
+            </a>
+
+            <a href="./pages/LCadena12.html" class="card">
+                <span class="card-icon">sol = 3</span>
+                <h3 class="card-title">Cantida de letras (While)</h3>
+                <p class="card-description">Dada una palabra, mostras la cantidad de letras</p>
+            </a>
+
+            <a href="./pages/LCadena13.html" class="card">
+                <span class="card-icon">sol = 1</span>
+                <h3 class="card-title">Número de vocales</h3>
+                <p class="card-description">Dada una palabra, mostras la cantidad de vocales</p>
+            </a>
+
+            <a href="./pages/LCadena14.html" class="card">
+                <span class="card-icon">cosa = cosa</span>
+                <h3 class="card-title">Palabras iguales</h3>
+                <p class="card-description">Dada dos palabras, mostras si son iguales</p>
+            </a>
+
+            <a href="./pages/DNumero15.html" class="card">
+                <span class="card-icon">🔢</span>
+                <h3 class="card-title">Divisores de números</h3>
+                <p class="card-description">Dada una cantidad de números, y mostrar los divisores</p>
+            </a>
+
+            <a href="./pages/SDNumero16.html" class="card">
+                <span class="card-icon">🔢</span>
+                <h3 class="card-title">Divisores de números</h3>
+                <p class="card-description">Dada una cantidad de números, y mostrar la suma de los divisores</p>
+            </a>
+
+            <a href="./pages/NumeroP17.html" class="card">
+                <span class="card-icon">🔢</span>
+                <h3 class="card-title">Número perfecto</h3>
+                <p class="card-description">Dada una cantidad de números, y mostrar si son perfectos o no</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
