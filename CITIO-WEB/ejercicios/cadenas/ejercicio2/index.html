@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2: Contar Letra 'a'</title>
+    <!-- Vinculación con tus CSS -->
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="../../condicionales/index.html">Condicionales</a></li>
+                <li><a href="../../ciclos/index.html">Ciclos</a></li>
+                <li><a href="../index.html">Cadenas</a></li>
+                <li><a href="../../arreglos/index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 2: Contar Letra 'a'</h1>
+                <p class="ejercicio-description">
+                    Pedir un texto y mostrar cuántas veces se repite la letra "a".
+                </p>
+            </div>
+
+            <!-- Entrada de datos -->
+            <div class="input-section">
+                <label for="textoInput">Ingresa un texto:</label>
+                <textarea id="textoInput" placeholder="Escribe aquí tu texto..." rows="4"></textarea>
+                <div class="button-group">
+                    <button onclick="contarLetraA()" class="btn-primary">🔍 Contar 'a'</button>
+                    <button onclick="limpiar()" class="btn-secondary">🧹 Limpiar</button>
+                </div>
+            </div>
+
+            <!-- Resultado -->
+            <div id="resultado" class="resultado">
+                <div class="info-box">
+                    💡 Ingresa un texto para contar las letras 'a'
+                </div>
+                
+                <div class="explicacion-box">
+                    <h3>💡 ¿Cómo funciona este ejercicio?</h3>
+                    <p><strong>¿Qué hace?</strong> Cuenta cuántas veces aparece la letra 'a' (mayúscula y minúscula) en un texto</p>
+                    <p><strong>Proceso:</strong></p>
+                    <ul>
+                        <li>🔄 Recorre cada carácter del texto</li>
+                        <li>🔍 Compara si es 'a' o 'A'</li>
+                        <li>📊 Cuenta cada coincidencia</li>
+                        <li>📋 Muestra el resultado final</li>
+                    </ul>
+                    <p><strong>Ejemplo:</strong> En "Casa de Ana" hay 4 letras 'a'</p>
+                    
+                    <div class="logica-ejercicio">
+                        <h4>🧠 Lógica del Ejercicio:</h4>
+                        <pre><code>let texto = prompt("Ingresa un texto");
+let contador = 0;
+
+for (let i = 0; i < texto.length; i++) {
+    if (texto[i].toLowerCase() === 'a') {
+        contador++;
+    }
+}
+
+alert("La letra 'a' aparece " + contador + " veces");</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

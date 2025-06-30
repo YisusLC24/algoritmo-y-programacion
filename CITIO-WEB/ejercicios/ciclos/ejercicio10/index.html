@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10: Contador de Números</title>
+    <!-- Vinculación con tus CSS -->
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="../../index.html">Condicionales</a></li>
+                <li><a href="../index.html">Ciclos</a></li>
+                <li><a href="../../cadenas/index.html">Cadenas</a></li>
+                <li><a href="../../arreglos/index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 10: Contador de Números</h1>
+                <p class="ejercicio-description">Pedir números hasta que el usuario escriba 0. Mostrar cuántos números ingresó con while</p>
+            </div>
+
+            <!-- Controles del Ejercicio -->
+            <div class="ejercicio-controls">
+                <div class="input-group">
+                    <input type="number" id="numeroInput" placeholder="Ingresa un número (0 para terminar)">
+                    <button onclick="agregarNumero()" class="btn-primary">Agregar Número</button>
+                    <button onclick="limpiar()" class="btn-secondary">Limpiar</button>
+                </div>
+            </div>
+
+            <!-- Resultado -->
+            <div class="resultado" id="resultado">
+                <h3>🔢 Ingresa números para contarlos</h3>
+                <p>💡 <strong>¿Cómo funciona este ejercicio?</strong></p>
+                <p><strong>¿Qué hace el programa?</strong> Cuenta cuántos números ingresas hasta que escribas 0.</p>
+                <p><strong>Proceso:</strong></p>
+                <ul>
+                    <li>🔢 Usar ciclo while para continuar pidiendo números</li>
+                    <li>📊 Contar cada número ingresado (excepto el 0)</li>
+                    <li>🛑 Parar cuando se ingrese 0</li>
+                    <li>📈 Mostrar el total de números ingresados</li>
+                </ul>
+                <p><strong>Ejemplo:</strong> Si ingresas 5, 10, -3, 7, 0, el contador será 4</p>
+                
+                <div class="logica-ejercicio">
+                    <h4>🧠 Lógica del Ejercicio:</h4>
+                    <pre><code>let contador = 0;
+let numero;
+
+while (true) {
+    numero = parseInt(prompt("Ingresa un número"));
+    
+    if (numero === 0) {
+        break; // Salir del ciclo si es 0
+    }
+    
+    contador++;
+}
+
+alert("Total de números ingresados: " + contador);</code></pre>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Vinculación con JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

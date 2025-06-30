@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7: Secuencia de Fibonacci</title>
+    <!-- Vinculación con CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../index.html">Inicio</a></li>
+                <li><a href="../condicionales/index.html">Condicionales</a></li>
+                <li><a href="../ciclos/index.html">Ciclos</a></li>
+                <li><a href="../cadenas/index.html">Cadenas</a></li>
+                <li><a href="../arreglos/index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 7: Secuencia de Fibonacci</h1>
+                <p class="ejercicio-description">
+                    Generar los primeros N términos de la secuencia de Fibonacci con while
+                </p>
+            </div>
+
+            <!-- Formulario del Ejercicio -->
+            <div class="ejercicio-form">
+                <div class="input-group">
+                    <label for="cantidad">¿Cuántos términos de Fibonacci quieres generar?</label>
+                    <input type="number" id="cantidad" placeholder="Ejemplo: 10" min="1">
+                </div>
+                
+                <div class="button-group">
+                    <button onclick="generarFibonacci()" class="btn-primary">🔢 Generar Fibonacci</button>
+                    <button onclick="limpiar()" class="btn-secondary">🗑️ Limpiar</button>
+                </div>
+            </div>
+
+            <!-- Resultado -->
+            <div id="resultado" class="resultado"></div>
+
+            <!-- Explicación -->
+            <div class="explicacion">
+                <h3>💡 ¿Qué es la secuencia de Fibonacci?</h3>
+                <p>La secuencia de Fibonacci es una serie numérica donde cada número es la suma de los dos anteriores.</p>
+                
+                <div class="proceso">
+                    <h4>Regla:</h4>
+                    <ul>
+                        <li>🥇 Los primeros dos números son: 0, 1</li>
+                        <li>➕ Cada siguiente número = suma de los dos anteriores</li>
+                        <li>🔄 Usar ciclo <code>while</code> para generar N términos</li>
+                        <li>📝 Ejemplo: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34...</li>
+                    </ul>
+                </div>
+
+                <div class="fibonacci-example">
+                    <h4>🧮 Cómo se calcula:</h4>
+                    <p>0 + 1 = 1</p>
+                    <p>1 + 1 = 2</p>
+                    <p>1 + 2 = 3</p>
+                    <p>2 + 3 = 5</p>
+                    <p>3 + 5 = 8</p>
+                    <p>5 + 8 = 13...</p>
+                </div>
+
+                <div class="codigo-logica">
+                    <h4>🔧 Lógica del Ejercicio:</h4>
+                    <pre><code>let n = parseInt(prompt("¿Cuántos términos?"));
+let a = 0, b = 1;
+let contador = 0;
+let fibonacci = [];
+
+while (contador < n) {
+    fibonacci.push(a);
+    let temp = a + b;
+    a = b;
+    b = temp;
+    contador++;
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

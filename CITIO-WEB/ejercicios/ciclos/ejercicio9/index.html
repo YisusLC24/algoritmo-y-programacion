@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9: Suma de Números Positivos</title>
+    <!-- Vinculación con tus CSS -->
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="../../index.html">Condicionales</a></li>
+                <li><a href="../index.html">Ciclos</a></li>
+                <li><a href="../../cadenas/index.html">Cadenas</a></li>
+                <li><a href="../../arreglos/index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 9: Suma de Números Positivos</h1>
+                <p class="ejercicio-description">Pedir números hasta que el usuario escriba un número negativo y mostrar la suma total con while</p>
+            </div>
+
+            <!-- Controles del Ejercicio -->
+            <div class="ejercicio-controls">
+                <div class="input-group">
+                    <input type="number" id="numeroInput" placeholder="Ingresa un número">
+                    <button onclick="agregarNumero()" class="btn-primary">Agregar Número</button>
+                    <button onclick="limpiar()" class="btn-secondary">Limpiar</button>
+                </div>
+            </div>
+
+            <!-- Resultado -->
+            <div class="resultado" id="resultado">
+                <h3>📝 Ingresa números para sumarlos</h3>
+                <p>💡 <strong>¿Cómo funciona este ejercicio?</strong></p>
+                <p><strong>¿Qué hace el programa?</strong> Suma todos los números positivos que ingreses hasta que escribas un número negativo.</p>
+                <p><strong>Proceso:</strong></p>
+                <ul>
+                    <li>🔢 Usar ciclo while para continuar pidiendo números</li>
+                    <li>➕ Sumar cada número positivo ingresado</li>
+                    <li>🛑 Parar cuando se ingrese un número negativo</li>
+                    <li>📊 Mostrar la suma total al final</li>
+                </ul>
+                <p><strong>Ejemplo:</strong> Si ingresas 5, 10, 3, -1, la suma será 18</p>
+                
+                <div class="logica-ejercicio">
+                    <h4>🧠 Lógica del Ejercicio:</h4>
+                    <pre><code>let suma = 0;
+let numero;
+let contador = 0;
+
+while (true) {
+    numero = parseInt(prompt("Ingresa un número"));
+    
+    if (numero < 0) {
+        break; // Salir del ciclo si es negativo
+    }
+    
+    suma += numero;
+    contador++;
+}
+
+alert("Suma total: " + suma);</code></pre>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Vinculación con JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

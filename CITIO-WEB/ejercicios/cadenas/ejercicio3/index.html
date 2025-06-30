@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3: Invertir Cadena</title>
+    <!-- Vinculación con tus CSS -->
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="../../condicionales/index.html">Condicionales</a></li>
+                <li><a href="../../ciclos/index.html">Ciclos</a></li>
+                <li><a href="../index.html">Cadenas</a></li>
+                <li><a href="../../arreglos/index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 3: Invertir Cadena</h1>
+                <p class="ejercicio-description">
+                    Invertir una cadena ingresada.
+                </p>
+            </div>
+
+            <!-- Entrada de datos -->
+            <div class="input-section">
+                <label for="cadenaInput">Ingresa una cadena de texto:</label>
+                <input type="text" id="cadenaInput" placeholder="Ejemplo: Hola Mundo">
+                <div class="button-group">
+                    <button onclick="invertirCadena()" class="btn-primary">🔄 Invertir</button>
+                    <button onclick="limpiar()" class="btn-secondary">🧹 Limpiar</button>
+                </div>
+            </div>
+
+            <!-- Resultado -->
+            <div id="resultado" class="resultado">
+                <div class="info-box">
+                    💡 Ingresa una cadena para ver su inversión
+                </div>
+                
+                <div class="explicacion-box">
+                    <h3>💡 ¿Cómo funciona este ejercicio?</h3>
+                    <p><strong>¿Qué hace?</strong> Invierte el orden de los caracteres de una cadena</p>
+                    <p><strong>Proceso:</strong></p>
+                    <ul>
+                        <li>🔄 Recorre la cadena desde el final hacia el inicio</li>
+                        <li>📝 Va construyendo una nueva cadena con los caracteres invertidos</li>
+                        <li>📋 Muestra el resultado final</li>
+                        <li>🔍 Compara carácter por carácter</li>
+                    </ul>
+                    <p><strong>Ejemplo:</strong> "Hola" se convierte en "aloH"</p>
+                    
+                    <div class="logica-ejercicio">
+                        <h4>🧠 Lógica del Ejercicio:</h4>
+                        <pre><code>let cadena = prompt("Ingresa una cadena");
+let cadenaInvertida = "";
+
+for (let i = cadena.length - 1; i >= 0; i--) {
+    cadenaInvertida += cadena[i];
+}
+
+alert("Cadena invertida: " + cadenaInvertida);</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

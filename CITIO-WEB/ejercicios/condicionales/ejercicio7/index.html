@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7: Saludos por Horario</title>
+    <!-- Vinculación con tus CSS -->
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="../../index.html">Condicionales</a></li>
+                <li><a href="../../../ciclos/index.html">Ciclos</a></li>
+                <li><a href="../../../cadenas/index.html">Cadenas</a></li>
+                <li><a href="../../../arreglos/index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 7: Saludos por Horario</h1>
+                <p class="ejercicio-description">
+                    🕐 Pedir la hora y mostrar el saludo apropiado según el momento del día
+                </p>
+            </div>
+
+            <!-- Contenido del Ejercicio -->
+            <div class="ejercicio-content">
+                <!-- Sección de Input -->
+                <div class="input-section">
+                    <label for="hora">Ingresa la hora (0-23):</label>
+                    <input 
+                        type="number" 
+                        id="hora" 
+                        placeholder="Ejemplo: 14" 
+                        min="0" 
+                        max="23"
+                        onkeypress="if(event.key==='Enter') saludarPorHorario()"
+                        oninput="validarHora()"
+                    >
+                </div>
+
+                <div class="button-group">
+                    <button onclick="saludarPorHorario()" class="btn-primary">
+                        <span>🕐</span> Saludar
+                    </button>
+                    <button onclick="limpiar()" class="btn-secondary">
+                        <span>🧹</span> Limpiar
+                    </button>
+                    <button onclick="horaActual()" class="btn-info">
+                        <span>⏰</span> Hora Actual
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sección de Resultado -->
+            <div class="resultado-section">
+                <h3>Resultado:</h3>
+                <div id="resultado" class="resultado-box">
+                    <p>🕐 Ingresa una hora para ver el saludo apropiado</p>
+                </div>
+            </div>
+
+            <!-- Sección de Información -->
+            <div class="info-section">
+                <h4>🤔 ¿Cómo funciona este ejercicio?</h4>
+                <div class="info-content">
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h5>🌅 Buenos días</h5>
+                            <p><strong>0 - 11 horas</strong></p>
+                            <small>Desde medianoche hasta mediodía</small>
+                        </div>
+                        <div class="info-card">
+                            <h5>☀️ Buenas tardes</h5>
+                            <p><strong>12 - 17 horas</strong></p>
+                            <small>Desde mediodía hasta anochecer</small>
+                        </div>
+                        <div class="info-card">
+                            <h5>🌙 Buenas noches</h5>
+                            <p><strong>18 - 23 horas</strong></p>
+                            <small>Desde anochecer hasta medianoche</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de Lógica -->
+            <div class="info-section">
+                <h4>🧠 Lógica del Ejercicio:</h4>
+                <div class="code-section">
+                    <pre>
+if (hora >= 0 && hora <= 11) {
+    saludo = "¡Buenos días! 🌅";
+} else if (hora >= 12 && hora <= 17) {
+    saludo = "¡Buenas tardes! ☀️";
+} else if (hora >= 18 && hora <= 23) {
+    saludo = "¡Buenas noches! 🌙";
+}
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Lógica de Programación - Ejercicios Interactivos</p>
+            <p>Desarrollado con ❤️ para aprender programación</p>
+        </div>
+    </footer>
+
+    <!-- Vinculación con JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

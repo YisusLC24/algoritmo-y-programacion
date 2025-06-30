@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5: Clasificación de Temperatura</title>
+    <!-- Vinculación con tus CSS -->
+    <link rel="stylesheet" href="../../../CSS/main.css">
+    <link rel="stylesheet" href="../../../CSS/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="../../index.html">Condicionales</a></li>
+                <li><a href="../../../ciclos/index.html">Ciclos</a></li>
+                <li><a href="../../../cadenas/index.html">Cadenas</a></li>
+                <li><a href="../../../arreglos/index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 5: Clasificación de Temperatura</h1>
+                <p class="ejercicio-description">
+                    🌡️ Ingresa una temperatura para ver la clasificación
+                </p>
+            </div>
+
+            <!-- Contenido del Ejercicio -->
+            <div class="ejercicio-content">
+                <!-- Sección de Input -->
+                <div class="input-section">
+                    <label for="temperatura">Ingresa la temperatura (°C):</label>
+                    <input 
+                        type="number" 
+                        id="temperatura" 
+                        placeholder="Ejemplo: 20" 
+                        min="-50" 
+                        max="60">
+                </div>
+
+                <div class="button-group">
+                    <button onclick="clasificarTemperatura()" class="btn-primary">
+                        <span>🌡️</span> Clasificar
+                    </button>
+                    <button onclick="limpiar()" class="btn-secondary">
+                        <span>🗑️</span> Limpiar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sección de Resultado -->
+            <div class="resultado-section">
+                <h3>Resultado:</h3>
+                <div id="resultado" class="resultado-box">
+                    <p>🌡️ Ingresa una temperatura para ver la clasificación</p>
+                </div>
+            </div>
+
+            <!-- Sección de Información -->
+            <div class="info-section">
+                <h4>🤔 ¿Cómo funciona este ejercicio?</h4>
+                <div class="info-content">
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h5>🥶 Frío</h5>
+                            <p><strong>Menos de 15°C</strong></p>
+                            <small>Temperaturas bajas, necesitas abrigo</small>
+                        </div>
+                        <div class="info-card">
+                            <h5>🌤️ Templado</h5>
+                            <p><strong>15°C - 25°C</strong></p>
+                            <small>Temperatura agradable y cómoda</small>
+                        </div>
+                        <div class="info-card">
+                            <h5>🔥 Calor</h5>
+                            <p><strong>Más de 25°C</strong></p>
+                            <small>Temperaturas altas, mantente hidratado</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lógica del Ejercicio -->
+            <div class="info-section">
+                <h4>🧠 Lógica del Ejercicio:</h4>
+                <div class="logic-content">
+                    <pre><code>if (temperatura < 15) {
+    clasificacion = "Frío 🥶";
+    descripcion = "Hace frío, abrígate bien";
+} else if (temperatura >= 15 && temperatura <= 25) {
+    clasificacion = "Templado 🌤️";
+    descripcion = "Temperatura agradable";
+} else {
+    clasificacion = "Calor 🔥";
+    descripcion = "Hace calor, mantente hidratado";
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Lógica de Programación - Ejercicios Interactivos</p>
+            <p>Desarrollado con ❤️ para aprender programación</p>
+        </div>
+    </footer>
+
+    <!-- Vinculación con JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

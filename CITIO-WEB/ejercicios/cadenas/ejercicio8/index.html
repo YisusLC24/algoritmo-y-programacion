@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8: Comparar Frases</title>
+    <!-- Vinculación con tus CSS -->
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="../../condicionales/index.html">Condicionales</a></li>
+                <li><a href="../../ciclos/index.html">Ciclos</a></li>
+                <li><a href="../../cadenas/index.html">Cadenas</a></li>
+                <li><a href="../../arreglos/index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 8: Comparar Frases</h1>
+                <p class="ejercicio-description">Pedir dos frases e indicar cual tiene mayor cantidad de caracteres</p>
+            </div>
+
+            <!-- Área de Entrada -->
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="frase1">Primera frase:</label>
+                    <input type="text" id="frase1" placeholder="Escribe la primera frase...">
+                </div>
+                
+                <div class="input-group">
+                    <label for="frase2">Segunda frase:</label>
+                    <input type="text" id="frase2" placeholder="Escribe la segunda frase...">
+                </div>
+                
+                <div class="button-group">
+                    <button id="compararBtn" onclick="compararFrases()">🔍 Comparar Frases</button>
+                    <button id="limpiarBtn" onclick="limpiar()">🧹 Limpiar</button>
+                </div>
+            </div>
+
+            <!-- Resultado -->
+            <div id="resultado" class="resultado-section" style="display: none;">
+                <h3>Resultado:</h3>
+                <div id="resultadoContent"></div>
+            </div>
+
+            <!-- Explicación -->
+            <div class="explicacion-section">
+                <h3>💡 ¿Cómo funciona este ejercicio?</h3>
+                <div class="explicacion-content">
+                    <p><strong>📝 Comparación de Frases</strong></p>
+                    <ul>
+                        <li>🔤 Ingresa dos frases diferentes</li>
+                        <li>📏 El programa cuenta los caracteres de cada frase</li>
+                        <li>⚖️ Compara las longitudes y determina cuál es mayor</li>
+                        <li>📊 Muestra el resultado con detalles</li>
+                    </ul>
+                </div>
+                
+                <div class="logica-section">
+                    <h4>🧠 Lógica del Ejercicio:</h4>
+                    <pre><code>let frase1 = prompt("Ingresa la primera frase");
+let frase2 = prompt("Ingresa la segunda frase");
+let longitud1 = frase1.length;
+let longitud2 = frase2.length;
+
+if (longitud1 > longitud2) {
+    console.log("La primera frase es más larga");
+} else if (longitud2 > longitud1) {
+    console.log("La segunda frase es más larga");
+} else {
+    console.log("Ambas frases tienen la misma longitud");
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

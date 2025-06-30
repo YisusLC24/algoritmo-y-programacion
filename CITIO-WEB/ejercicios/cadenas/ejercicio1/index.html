@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1: Contador de Letras</title>
+    <!-- Vinculación con tus CSS -->
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="../../condicionales/index.html">Condicionales</a></li>
+                <li><a href="../../ciclos/index.html">Ciclos</a></li>
+                <li><a href="../index.html">Cadenas</a></li>
+                <li><a href="../../arreglos/index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 1: Contador de Letras</h1>
+                <p class="ejercicio-description">Pedir una palabra y mostrar cuántas letras tiene</p>
+            </div>
+
+            <!-- Controles del Ejercicio -->
+            <div class="ejercicio-controls">
+                <div class="input-group">
+                    <input type="text" id="palabraInput" placeholder="Ingresa una palabra">
+                    <button onclick="contarLetras()" class="btn-primary">Contar Letras</button>
+                    <button onclick="limpiar()" class="btn-secondary">Limpiar</button>
+                </div>
+            </div>
+
+            <!-- Resultado -->
+            <div class="resultado" id="resultado">
+                <h3>🔤 Ingresa una palabra para contar sus letras</h3>
+                <p>💡 <strong>¿Cómo funciona este ejercicio?</strong></p>
+                <p><strong>¿Qué hace el programa?</strong> Cuenta la cantidad de letras que tiene una palabra.</p>
+                <p><strong>Proceso:</strong></p>
+                <ul>
+                    <li>📝 Recibir una palabra del usuario</li>
+                    <li>🔢 Usar la propiedad .length para obtener la longitud</li>
+                    <li>📊 Mostrar el total de caracteres</li>
+                    <li>🔍 Análisis detallado de la palabra</li>
+                </ul>
+                <p><strong>Ejemplo:</strong> "Programación" tiene 12 letras</p>
+                
+                <div class="logica-ejercicio">
+                    <h4>🧠 Lógica del Ejercicio:</h4>
+                    <pre><code>let palabra = prompt("Ingresa una palabra");
+let cantidadLetras = palabra.length;
+
+alert("La palabra '" + palabra + "' tiene " + cantidadLetras + " letras");</code></pre>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Vinculación con JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

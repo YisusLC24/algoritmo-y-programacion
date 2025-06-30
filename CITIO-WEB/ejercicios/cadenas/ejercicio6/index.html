@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6: Reemplazar Letras</title>
+    <!-- Vinculación con tus CSS -->
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="../../condicionales/index.html">Condicionales</a></li>
+                <li><a href="../../ciclos/index.html">Ciclos</a></li>
+                <li><a href="../index.html">Cadenas</a></li>
+                <li><a href="../../arreglos/index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 6: Reemplazar Letras</h1>
+                <p class="ejercicio-description">
+                    Pedir un texto y reemplazar todas las "a" por "@"
+                </p>
+            </div>
+
+            <!-- Entrada de Datos -->
+            <div class="input-section">
+                <label for="textoInput">Ingresa un texto:</label>
+                <textarea id="textoInput" placeholder="Escribe aquí tu texto..." rows="4"></textarea>
+                <div class="button-group">
+                    <button id="reemplazarBtn" class="btn-primary">🔄 Reemplazar</button>
+                    <button id="limpiarBtn" class="btn-secondary">🧹 Limpiar</button>
+                </div>
+            </div>
+
+            <!-- Resultado -->
+            <div id="resultado" class="resultado-section" style="display: none;">
+                <h3>Resultado:</h3>
+                <div class="comparison-container">
+                    <div class="text-comparison">
+                        <div class="original-text">
+                            <h4>📝 Texto Original:</h4>
+                            <div id="textoOriginal" class="text-display"></div>
+                        </div>
+                        <div class="modified-text">
+                            <h4>✨ Texto Modificado:</h4>
+                            <div id="textoModificado" class="text-display modified"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="statistics">
+                    <div class="stat-item">
+                        <span class="stat-label">Letras "a" reemplazadas:</span>
+                        <span id="cantidadReemplazos" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Total de caracteres:</span>
+                        <span id="totalCaracteres" class="stat-value">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Explicación -->
+            <div class="explicacion-section">
+                <h3>💡 ¿Cómo funciona este ejercicio?</h3>
+                <div class="explicacion-content">
+                    <p><strong>¿Qué es reemplazar texto?</strong> Es cambiar todas las ocurrencias de un carácter o palabra por otro.</p>
+                    
+                    <h4>🔧 Proceso:</h4>
+                    <ul class="proceso-list">
+                        <li>📝 Leer el texto ingresado</li>
+                        <li>🔍 Buscar todas las letras "a" (mayúsculas y minúsculas)</li>
+                        <li>🔄 Reemplazar cada "a" por "@"</li>
+                        <li>📊 Contar cuántos reemplazos se hicieron</li>
+                        <li>📋 Mostrar el resultado</li>
+                    </ul>
+
+                    <p><strong>Ejemplo:</strong> "La casa es grande" → "L@ c@s@ es gr@nde"</p>
+
+                    <h4>⚡ Lógica del Ejercicio:</h4>
+                    <div class="codigo-ejemplo">
+                        <pre><code>let texto = prompt("Ingresa un texto");
+let textoModificado = texto.replaceAll('a', '@').replaceAll('A', '@');
+console.log("Texto original: " + texto);
+console.log("Texto modificado: " + textoModificado);</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

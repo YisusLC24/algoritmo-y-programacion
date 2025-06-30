@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9: Descuento por Cliente VIP</title>
+    <!-- Vinculación con tus CSS -->
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="../../index.html">Condicionales</a></li>
+                <li><a href="../../../ciclos/index.html">Ciclos</a></li>
+                <li><a href="../../../cadenas/index.html">Cadenas</a></li>
+                <li><a href="../../../arreglos/index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 9: Descuento por Cliente VIP</h1>
+                <p class="ejercicio-description">Pedir el tipo de cliente (Normal o VIP) y su gasto. Si es VIP y gastó más de 100, tiene 20% de descuento; si no, 10%. Al final aplicar el 15% del IVA</p>
+            </div>
+
+            <!-- Contenido del Ejercicio -->
+            <div class="ejercicio-content">
+                <!-- Sección de Input -->
+                <div class="input-section">
+                    <label for="tipoCliente">Selecciona el tipo de cliente:</label>
+                    <select id="tipoCliente">
+                        <option value="">-- Selecciona --</option>
+                        <option value="Normal">Normal</option>
+                        <option value="VIP">VIP</option>
+                    </select>
+                    
+                    <label for="gasto">Ingresa el monto del gasto:</label>
+                    <input type="number" 
+                           id="gasto" 
+                           placeholder="Ejemplo: 150" 
+                           min="0" 
+                           step="0.01">
+                </div>
+
+                <div class="button-group">
+                    <button onclick="calcularDescuento()" class="btn-primary">
+                        <span>💰</span> Calcular
+                    </button>
+                    <button onclick="limpiar()" class="btn-secondary">
+                        <span>✨</span> Limpiar
+                    </button>
+                </div>
+
+                <!-- Sección de Resultado -->
+                <div class="resultado-section">
+                    <h3>Resultado:</h3>
+                    <div id="resultado" class="resultado-box">
+                        <p>💡 Ingresa el tipo de cliente y el gasto para ver el cálculo</p>
+                    </div>
+                </div>
+
+                <!-- Sección de Información -->
+                <div class="info-section">
+                    <h4>💡 ¿Cómo funciona este ejercicio?</h4>
+                    <div class="info-content">
+                        <div class="info-grid">
+                            <div class="info-card">
+                                <h5>📋 Sistema de Descuentos</h5>
+                                <p><strong>Cliente VIP + Gasto > $100:</strong></p>
+                                <small>Descuento del 20%</small>
+                            </div>
+                            <div class="info-card">
+                                <h5>💳 Otros Casos</h5>
+                                <p><strong>Todos los demás:</strong></p>
+                                <small>Descuento del 10%</small>
+                            </div>
+                            <div class="info-card">
+                                <h5>🧾 IVA Final</h5>
+                                <p><strong>Siempre se aplica:</strong></p>
+                                <small>15% sobre el monto con descuento</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lógica del Ejercicio -->
+                <div class="info-section">
+                    <h4>🔍 Lógica del Ejercicio:</h4>
+                    <pre><code>if (tipoCliente == "VIP" && gasto > 100) {
+    descuento = 20%; // 20% de descuento
+} else {
+    descuento = 10%; // 10% de descuento
+}
+
+montoConDescuento = gasto - (gasto * descuento / 100);
+iva = montoConDescuento * 0.15;
+total = montoConDescuento + iva;</code></pre>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Lógica de Programación - Ejercicios Interactivos</p>
+            <p>Desarrollado con ❤️ para aprender programación</p>
+        </div>
+    </footer>
+
+    <!-- Vinculación con JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

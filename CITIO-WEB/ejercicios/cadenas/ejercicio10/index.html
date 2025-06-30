@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10: Dividir Oración en Palabras</title>
+    <!-- Vinculación con tus CSS -->
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="../../condicionales/index.html">Condicionales</a></li>
+                <li><a href="../../ciclos/index.html">Ciclos</a></li>
+                <li><a href="../index.html">Cadenas</a></li>
+                <li><a href="../../arreglos/index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 10: Dividir Oración en Palabras</h1>
+                <p class="ejercicio-description">
+                    Dividir una oración en palabras y mostrarlas una por una.
+                </p>
+            </div>
+
+            <!-- Input -->
+            <div class="input-section">
+                <label for="oracion">Ingresa una oración:</label>
+                <input type="text" id="oracion" placeholder="Ejemplo: La programación es divertida y educativa" 
+                       onkeypress="if(event.key === 'Enter') dividirOracion()">
+                <div class="button-group">
+                    <button onclick="dividirOracion()">🔍 Dividir Oración</button>
+                    <button onclick="limpiar()">🗑️ Limpiar</button>
+                </div>
+            </div>
+
+            <!-- Resultado -->
+            <div class="resultado" id="resultado">
+                <div class="info-icon">💡</div>
+                <div class="info-text">
+                    <strong>Ingresa una oración para dividirla en palabras</strong>
+                    <div class="explicacion">
+                        <p><strong>¿Qué es dividir una oración?</strong> Es separar el texto en palabras individuales usando espacios como delimitadores.</p>
+                        <p><strong>Proceso:</strong></p>
+                        <ol>
+                            <li>🔤 Usar el método .split(" ") para dividir por espacios</li>
+                            <li>🧹 Eliminar palabras vacías (espacios extra)</li>
+                            <li>📊 Contar el total de palabras</li>
+                            <li>📝 Mostrar cada palabra individualmente</li>
+                        </ol>
+                        <p><strong>Ejemplo:</strong> "Hola mundo" → ["Hola", "mundo"] → 2 palabras</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lógica del Ejercicio -->
+            <div class="logica-ejercicio">
+                <h3>🧠 Lógica del Ejercicio:</h3>
+                <div class="codigo">
+                    <pre><code>let oracion = prompt("Ingresa una oración");
+let palabras = oracion.split(" ");
+let palabrasLimpias = palabras.filter(palabra => palabra.length > 0);
+
+console.log("Total de palabras: " + palabrasLimpias.length);
+
+for (let i = 0; i < palabrasLimpias.length; i++) {
+    console.log("Palabra " + (i + 1) + ": " + palabrasLimpias[i]);
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

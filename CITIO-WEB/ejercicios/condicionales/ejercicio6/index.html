@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6: Saludo Personalizado por Género</title>
+    <!-- Vinculación con tus CSS -->
+    <link rel="stylesheet" href="../../../CSS/main.css">
+    <link rel="stylesheet" href="../../../CSS/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="../../index.html">Condicionales</a></li>
+                <li><a href="../../../ciclos/index.html">Ciclos</a></li>
+                <li><a href="../../../cadenas/index.html">Cadenas</a></li>
+                <li><a href="../../../arreglos/index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 6: Saludo Personalizado por Género</h1>
+                <p class="ejercicio-description">
+                    👋 Ingresa tu nombre y género para recibir un saludo personalizado
+                </p>
+            </div>
+
+            <!-- Contenido del Ejercicio -->
+            <div class="ejercicio-content">
+                <!-- Sección de Input -->
+                <div class="input-section">
+                    <label for="nombre">Ingresa tu nombre:</label>
+                    <input 
+                        type="text" 
+                        id="nombre" 
+                        placeholder="Ejemplo: María" 
+                        maxlength="50">
+                </div>
+
+                <div class="input-section">
+                    <label for="genero">Selecciona tu género:</label>
+                    <select id="genero">
+                        <option value="">-- Selecciona una opción --</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Prefiero no especificar</option>
+                    </select>
+                </div>
+
+                <div class="button-group">
+                    <button onclick="generarSaludo()" class="btn-primary">
+                        <span>👋</span> Saludar
+                    </button>
+                    <button onclick="limpiar()" class="btn-secondary">
+                        <span>🗑️</span> Limpiar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sección de Resultado -->
+            <div class="resultado-section">
+                <h3>Resultado:</h3>
+                <div id="resultado" class="resultado-box">
+                    <p>👋 Ingresa tu nombre y género para recibir un saludo personalizado</p>
+                </div>
+            </div>
+
+            <!-- Sección de Información -->
+            <div class="info-section">
+                <h4>🤔 ¿Cómo funciona este ejercicio?</h4>
+                <div class="info-content">
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h5>👨 Masculino</h5>
+                            <p><strong>"Bienvenido"</strong></p>
+                            <small>Saludo dirigido a personas de género masculino</small>
+                        </div>
+                        <div class="info-card">
+                            <h5>👩 Femenino</h5>
+                            <p><strong>"Bienvenida"</strong></p>
+                            <small>Saludo dirigido a personas de género femenino</small>
+                        </div>
+                        <div class="info-card">
+                            <h5>👤 Otro</h5>
+                            <p><strong>"Bienvenido/a"</strong></p>
+                            <small>Saludo inclusivo para todas las personas</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lógica del Ejercicio -->
+            <div class="info-section">
+                <h4>🧠 Lógica del Ejercicio:</h4>
+                <div class="logic-content">
+                    <pre><code>if (genero === "masculino") {
+    saludo = "¡Bienvenido " + nombre + "!";
+    emoji = "👨";
+} else if (genero === "femenino") {
+    saludo = "¡Bienvenida " + nombre + "!";
+    emoji = "👩";
+} else {
+    saludo = "¡Bienvenido/a " + nombre + "!";
+    emoji = "👋";
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Lógica de Programación - Ejercicios Interactivos</p>
+            <p>Desarrollado con ❤️ para aprender programación</p>
+        </div>
+    </footer>
+
+    <!-- Vinculación con JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

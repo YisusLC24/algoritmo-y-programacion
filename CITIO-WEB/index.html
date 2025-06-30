@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plataforma de ejercicios de lógica de programación para estudiantes universitarios">
+    <meta name="keywords" content="programación, lógica, ejercicios, JavaScript, condicionales, ciclos, cadenas, arreglos">
+    <meta name="author" content="Proyecto Lógica de Programación">
+    <title>Lógica de Programación - Ejercicios Interactivos</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+    <!-- HEADER Y NAVEGACIÓN -->
+    <header>
+        <nav>
+            <a href="#inicio" class="logo">💻 LogicaJS</a>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#ejercicios">Ejercicios</a></li>
+                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECCIÓN HERO/INICIO -->
+        <section id="inicio" class="hero">
+            <h1>🚀 Aprende Lógica de Programación</h1>
+            <p>Desarrolla tus habilidades con ejercicios interactivos de JavaScript</p>
+            <p>Condicionales • Ciclos • Cadenas • Arreglos</p>
+            <a href="#ejercicios" class="btn">Comenzar Ejercicios</a>
+        </section>
+
+        <!-- SECCIÓN DE EJERCICIOS -->
+        <section id="ejercicios" class="sections-grid">
+            <div class="section-card" data-section="condicionales">
+                <h3>🔀 Condicionales</h3>
+                <p>Aprende a tomar decisiones en tu código con estructuras if, else y switch</p>
+                <p><strong>Ejercicios 1-10</strong></p>
+                <button class="btn btn-section" data-section="condicionales">Ver Ejercicios</button>
+            </div>
+
+            <div class="section-card" data-section="ciclos">
+                <h3>🔄 Ciclos</h3>
+                <p>Domina la repetición con bucles for, while y do-while</p>
+                <p><strong>Ejercicios 11-20</strong></p>
+                <button class="btn btn-section" data-section="ciclos">Ver Ejercicios</button>
+            </div>
+
+            <div class="section-card" data-section="cadenas">
+                <h3>📝 Cadenas</h3>
+                <p>Manipula y procesa texto con métodos de strings</p>
+                <p><strong>Ejercicios 21-30</strong></p>
+                <button class="btn btn-section" data-section="cadenas">Ver Ejercicios</button>
+            </div>
+
+            <div class="section-card" data-section="arreglos">
+                <h3>📊 Arreglos</h3>
+                <p>Gestiona colecciones de datos con arrays y métodos</p>
+                <p><strong>Ejercicios 31-40</strong></p>
+                <button class="btn btn-section" data-section="arreglos">Ver Ejercicios</button>
+            </div>
+        </section>
+
+        <!-- SECCIÓN SOBRE NOSOTROS -->
+        <section id="sobre-nosotros" class="page-content">
+            <h2 class="page-title">📚 Sobre el Proyecto</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>🎯 Objetivo</h3>
+                    <p>Este proyecto tiene como objetivo crear una plataforma interactiva de ejercicios de lógica de programación diseñada específicamente para estudiantes de primer año de universidad.</p>
+                    
+                    <h3>🧠 Metodología</h3>
+                    <p>Los ejercicios están organizados en cuatro niveles de dificultad progresiva:</p>
+                    <ul>
+                        <li><strong>Condicionales:</strong> Estructuras de decisión y control de flujo</li>
+                        <li><strong>Ciclos:</strong> Bucles y repeticiones para automatizar tareas</li>
+                        <li><strong>Cadenas:</strong> Manipulación y procesamiento de texto</li>
+                        <li><strong>Arreglos:</strong> Gestión de colecciones y estructuras de datos</li>
+                    </ul>
+                    
+                    <h3>⚡ Tecnologías</h3>
+                    <p>El proyecto está desarrollado utilizando tecnologías web modernas:</p>
+                    <ul>
+                        <li><strong>HTML5:</strong> Estructura semántica y accesible</li>
+                        <li><strong>CSS3:</strong> Diseño responsivo y animaciones</li>
+                        <li><strong>JavaScript:</strong> Lógica interactiva y ejercicios prácticos</li>
+                    </ul>
+                    
+                    <h3>🎨 Características</h3>
+                    <ul>
+                        <li>✅ Interfaz intuitiva y amigable</li>
+                        <li>✅ Retroalimentación inmediata</li>
+                        <li>✅ Diseño completamente responsivo</li>
+                        <li>✅ 40 ejercicios prácticos</li>
+                        <li>✅ Progresión de dificultad gradual</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN CONTACTO -->
+        <section id="contacto" class="page-content">
+            <h2 class="page-title">📞 Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>¿Tienes preguntas o sugerencias?</h3>
+                    <p>Nos encantaría escuchar tus comentarios sobre el proyecto. Tu retroalimentación nos ayuda a mejorar la plataforma.</p>
+                </div>
+                
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn">Enviar Mensaje</button>
+                </form>
+                
+                <div class="contact-extra">
+                    <h3>🌐 Información del Proyecto</h3>
+                    <p><strong>Materia:</strong> Lógica de Programación</p>
+                    <p><strong>Unidades:</strong> 3-4 - Metodología de la programación</p>
+                    <p><strong>Tema:</strong> Herramientas tecnológicas para el diseño de algoritmos</p>
+                    <p><strong>Tipo:</strong> Trabajo de Investigación</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <span id="footer-year">2024</span> Proyecto Lógica de Programación</p>
+            <p>Desarrollado con ❤️ para estudiantes universitarios</p>
+            <p>🎓 Universidad • 📚 Lógica de Programación • 💻 JavaScript</p>
+        </div>
+    </footer>
+
+    <!-- MODAL TEMPLATE (Se crea dinámicamente con JS) -->
+    <style>
+        /* Estilos adicionales para modales */
+        .exercise-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .exercise-modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .modal-content {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            transform: translateY(-30px);
+            transition: transform 0.3s ease;
+        }
+        
+        .exercise-modal.show .modal-content {
+            transform: translateY(0);
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 1rem;
+        }
+        
+        .modal-header h3 {
+            color: #667eea;
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #999;
+            transition: color 0.3s ease;
+        }
+        
+        .close-modal:hover {
+            color: #667eea;
+        }
+        
+        .exercises-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+        }
+        
+        .exercise-link {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 10px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .exercise-link:hover {
+            transform: translateY(-2px);
+        }
+        
+        /* Notificaciones */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            color: white;
+            font-weight: 500;
+            z-index: 10001;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .notification.notification-info {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+        }
+        
+        .notification.notification-success {
+            background: linear-gradient(45deg, #4ecdc4, #44a08d);
+        }
+        
+        .notification.notification-error {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a6f);
+        }
+        
+        .notification.show {
+            transform: translateX(0);
+        }
+        
+        .notification.fade-out {
+            transform: translateX(100%);
+        }
+        
+        .close-notification {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        
+        .close-notification:hover {
+            opacity: 1;
+        }
+        
+        /* Responsivo adicional */
+        @media (max-width: 768px) {
+            .exercises-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .modal-content {
+                padding: 1.5rem;
+                margin: 1rem;
+            }
+            
+            .notification {
+                right: 10px;
+                left: 10px;
+                transform: translateY(-100%);
+            }
+            
+            .notification.show {
+                transform: translateY(0);
+            }
+            
+            .notification.fade-out {
+                transform: translateY(-100%);
+            }
+        }
+    </style>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/main.js"></script>
+    
+    <!-- Script adicional para inicialización -->
+    <script>
+        // Mostrar notificación de bienvenida
+        setTimeout(() => {
+            if (typeof SiteUtils !== 'undefined') {
+                SiteUtils.showNotification('¡Bienvenido a la plataforma de Lógica de Programación! 🚀', 'info');
+            }
+        }, 2000);
+        
+        // Efecto de partículas en el hero (opcional)
+        function createParticles() {
+            const hero = document.querySelector('.hero');
+            if (!hero) return;
+            
+            for (let i = 0; i < 20; i++) {
+                const particle = document.createElement('div');
+                particle.style.cssText = `
+                    position: absolute;
+                    width: 4px;
+                    height: 4px;
+                    background: rgba(255, 255, 255, 0.5);
+                    border-radius: 50%;
+                    pointer-events: none;
+                    animation: float ${3 + Math.random() * 4}s ease-in-out infinite;
+                    left: ${Math.random() * 100}%;
+                    top: ${Math.random() * 100}%;
+                    animation-delay: ${Math.random() * 2}s;
+                `;
+                hero.appendChild(particle);
+            }
+        }
+        
+        // CSS para animación de partículas
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes float {
+                0%, 100% { transform: translateY(0px); opacity: 0.5; }
+                50% { transform: translateY(-20px); opacity: 1; }
+            }
+            .hero { position: relative; overflow: hidden; }
+        `;
+        document.head.appendChild(style);
+        
+        // Crear partículas después de cargar
+        setTimeout(createParticles, 1000);
+    </script>
+</body>
+</html>

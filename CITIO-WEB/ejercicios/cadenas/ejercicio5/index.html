@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5: Iniciales de Nombre</title>
+    <!-- Vinculación con tus CSS -->
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="../../condicionales/index.html">Condicionales</a></li>
+                <li><a href="../../ciclos/index.html">Ciclos</a></li>
+                <li><a href="../index.html">Cadenas</a></li>
+                <li><a href="../../arreglos/index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 5: Iniciales de Nombre</h1>
+                <p class="ejercicio-description">Pedir un nombre completo y mostrar solo las iniciales.</p>
+            </div>
+
+            <!-- Entrada de Datos -->
+            <div class="ejercicio-input">
+                <label for="nombreCompleto">Ingresa un nombre completo:</label>
+                <input type="text" id="nombreCompleto" placeholder="Ejemplo: Juan Carlos Pérez González">
+                
+                <div class="ejercicio-buttons">
+                    <button onclick="obtenerIniciales()">🎯 Obtener Iniciales</button>
+                    <button onclick="limpiar()">🧹 Limpiar</button>
+                </div>
+            </div>
+
+            <!-- Resultado -->
+            <div class="resultado" id="resultado">
+                <p>📝 Ingresa un nombre completo para obtener las iniciales</p>
+                <div class="info-section">
+                    <h3>💡 ¿Cómo funciona este ejercicio?</h3>
+                    <p><strong>¿Qué son las iniciales?</strong> Las iniciales son las primeras letras de cada palabra del nombre, generalmente se muestran en mayúsculas.</p>
+                    
+                    <div class="proceso">
+                        <h4>📋 Proceso:</h4>
+                        <ul>
+                            <li>📝 Leer el nombre completo del usuario</li>
+                            <li>✂️ Dividir el nombre en palabras usando <code>split(' ')</code></li>
+                            <li>🔤 Obtener la primera letra de cada palabra</li>
+                            <li>🔠 Convertir cada inicial a mayúscula</li>
+                            <li>🔗 Unir las iniciales con puntos</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ejemplo">
+                        <h4>🌟 Ejemplo:</h4>
+                        <p>Nombre: "Juan Carlos Pérez González"</p>
+                        <p>Iniciales: "J.C.P.G."</p>
+                    </div>
+                    
+                    <div class="logica">
+                        <h4>💻 Lógica del Ejercicio:</h4>
+                        <pre><code>let nombreCompleto = prompt("Ingresa tu nombre completo");
+let palabras = nombreCompleto.split(' ');
+let iniciales = '';
+
+for (let palabra of palabras) {
+    if (palabra.trim() !== '') {
+        iniciales += palabra[0].toUpperCase() + '.';
+    }
+}
+
+console.log("Iniciales: " + iniciales);</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

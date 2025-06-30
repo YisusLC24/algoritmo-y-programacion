@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4: Buscar Valor en Arreglo</title>
+    <!-- Vinculación con tus CSS -->
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="../../condicionales/index.html">Condicionales</a></li>
+                <li><a href="../../ciclos/index.html">Ciclos</a></li>
+                <li><a href="../../cadenas/index.html">Cadenas</a></li>
+                <li><a href="../../../arreglos/index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 4: Buscar Valor en Arreglo</h1>
+                <p class="ejercicio-description">
+                    Buscar un valor en un arreglo y decir si existe o no.
+                </p>
+            </div>
+
+            <!-- Área de Input -->
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="arregloInput">Ingresa los elementos del arreglo (separados por comas):</label>
+                    <input type="text" id="arregloInput" placeholder="Ejemplo: 5, 10, 3, 8, 15, 2">
+                </div>
+                
+                <div class="input-group">
+                    <label for="valorBuscado">Valor a buscar:</label>
+                    <input type="text" id="valorBuscado" placeholder="Ejemplo: 8">
+                </div>
+
+                <div class="button-group">
+                    <button id="buscarBtn" class="btn-primary">🔍 Buscar Valor</button>
+                    <button id="limpiarBtn" class="btn-secondary">🧹 Limpiar</button>
+                </div>
+            </div>
+
+            <!-- Resultado -->
+            <div id="resultado" class="resultado">
+                <div class="info-icon">💡</div>
+                <div class="info-text">Ingresa un arreglo y un valor para buscar</div>
+                
+                <div class="explicacion">
+                    <h3>¿Cómo funciona este ejercicio?</h3>
+                    <p><strong>¿Qué es buscar en un arreglo?</strong> Buscar significa verificar si un elemento específico existe dentro de un arreglo de datos.</p>
+                    
+                    <h4>Proceso:</h4>
+                    <ul class="proceso-lista">
+                        <li>🔢 Crear el arreglo con los elementos ingresados</li>
+                        <li>🔍 Recorrer cada elemento del arreglo</li>
+                        <li>⚖️ Comparar cada elemento con el valor buscado</li>
+                        <li>✅ Si encuentra coincidencia, retornar "encontrado"</li>
+                        <li>❌ Si termina sin encontrar, retornar "no encontrado"</li>
+                    </ul>
+                    
+                    <div class="ejemplo">
+                        <strong>Ejemplo:</strong> En el arreglo [1, 3, 5, 7, 9] buscar el número 5
+                        <br>Resultado: "El valor 5 SÍ existe en el arreglo, en la posición 2"
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lógica del Ejercicio -->
+            <div class="logica-section">
+                <h3>🧠 Lógica del Ejercicio:</h3>
+                <div class="codigo-container">
+                    <pre class="codigo">
+let arreglo = [5, 10, 3, 8, 15, 2];
+let valorBuscado = 8;
+let encontrado = false;
+let posicion = -1;
+
+for (let i = 0; i < arreglo.length; i++) {
+    if (arreglo[i] == valorBuscado) {
+        encontrado = true;
+        posicion = i;
+        break;
+    }
+}
+
+if (encontrado) {
+    console.log("Valor encontrado en posición: " + posicion);
+} else {
+    console.log("Valor no encontrado");
+}
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

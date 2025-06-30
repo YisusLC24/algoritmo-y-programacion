@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6: Cubo de Elementos de Arreglo</title>
+    <!-- Vinculación con tus CSS -->
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="../../condicionales/index.html">Condicionales</a></li>
+                <li><a href="../../ciclos/index.html">Ciclos</a></li>
+                <li><a href="../../cadenas/index.html">Cadenas</a></li>
+                <li><a href="../index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 6: Cubo de Elementos de Arreglo</h1>
+                <p class="ejercicio-description">
+                    Obtener el cubo de cada elemento de un arreglo de n números
+                </p>
+            </div>
+
+            <!-- Input Section -->
+            <div class="input-section">
+                <label for="numeros">Ingresa números separados por coma:</label>
+                <input type="text" id="numeros" placeholder="Ejemplo: 1,2,3,4,5" onkeypress="if(event.key==='Enter') calcularCubos()">
+                <div class="button-group">
+                    <button onclick="calcularCubos()">🔢 Calcular Cubos</button>
+                    <button onclick="limpiar()">🧹 Limpiar</button>
+                </div>
+            </div>
+
+            <!-- Resultado -->
+            <div id="resultado" class="resultado">
+                <div class="info-icon">💡</div>
+                <div class="info-text">Ingresa números separados por coma para ver sus cubos</div>
+                
+                <div class="info-section">
+                    <h3>¿Cómo funciona este ejercicio?</h3>
+                    <p><strong>¿Qué es el cubo de un número?</strong> El cubo de un número es el resultado de multiplicar ese número por sí mismo tres veces (n³ = n × n × n)</p>
+                    
+                    <h4>Proceso:</h4>
+                    <ul>
+                        <li>🔤 Dividir la cadena de entrada en un arreglo</li>
+                        <li>🔢 Convertir cada elemento a número</li>
+                        <li>🎯 Calcular el cubo de cada número (n³)</li>
+                        <li>📊 Mostrar el arreglo original y el de cubos</li>
+                    </ul>
+                    
+                    <p><strong>Ejemplo:</strong> Los cubos de [1, 2, 3, 4] son [1, 8, 27, 64]</p>
+                </div>
+            </div>
+
+            <!-- Lógica del Ejercicio -->
+            <div class="logica-ejercicio">
+                <h3>🧠 Lógica del Ejercicio:</h3>
+                <pre><code>let numeros = entrada.split(',').map(n => parseFloat(n.trim()));
+let cubos = [];
+
+for (let i = 0; i < numeros.length; i++) {
+    let cubo = numeros[i] ** 3; // o Math.pow(numeros[i], 3)
+    cubos.push(cubo);
+}
+
+// Mostrar arreglo original y cubos</code></pre>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

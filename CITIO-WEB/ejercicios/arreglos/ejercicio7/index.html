@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7: Tabla de Multiplicar de Arreglo</title>
+    <!-- Vinculación con tus CSS -->
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="../../condicionales/index.html">Condicionales</a></li>
+                <li><a href="../../ciclos/index.html">Ciclos</a></li>
+                <li><a href="../../cadenas/index.html">Cadenas</a></li>
+                <li><a href="../index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 7: Tabla de Multiplicar de Arreglo</h1>
+                <p class="ejercicio-description">
+                    Mostrar la tabla de multiplicar de los elementos de un arreglo de n números
+                </p>
+            </div>
+
+            <!-- Input Section -->
+            <div class="input-section">
+                <label for="numeros">Ingresa números separados por coma:</label>
+                <input type="text" id="numeros" placeholder="Ejemplo: 2,3,5" onkeypress="if(event.key==='Enter') mostrarTablas()">
+                
+                <label for="limite">Hasta qué número multiplicar (1-12):</label>
+                <input type="number" id="limite" value="10" min="1" max="12" onkeypress="if(event.key==='Enter') mostrarTablas()">
+                
+                <div class="button-group">
+                    <button onclick="mostrarTablas()">📊 Mostrar Tablas</button>
+                    <button onclick="limpiar()">🧹 Limpiar</button>
+                </div>
+            </div>
+
+            <!-- Resultado -->
+            <div id="resultado" class="resultado">
+                <div class="info-icon">💡</div>
+                <div class="info-text">Ingresa números separados por coma para ver sus tablas de multiplicar</div>
+                
+                <div class="info-section">
+                    <h3>¿Cómo funciona este ejercicio?</h3>
+                    <p><strong>¿Qué es una tabla de multiplicar?</strong> Es una lista que muestra el resultado de multiplicar un número por todos los números del 1 al límite establecido</p>
+                    
+                    <h4>Proceso:</h4>
+                    <ul>
+                        <li>🔤 Dividir la cadena de entrada en un arreglo</li>
+                        <li>🔢 Convertir cada elemento a número</li>
+                        <li>📊 Para cada número, generar su tabla de multiplicar</li>
+                        <li>🎯 Mostrar todas las tablas organizadamente</li>
+                    </ul>
+                    
+                    <p><strong>Ejemplo:</strong> Para el número 3: 3×1=3, 3×2=6, 3×3=9, etc.</p>
+                </div>
+            </div>
+
+            <!-- Lógica del Ejercicio -->
+            <div class="logica-ejercicio">
+                <h3>🧠 Lógica del Ejercicio:</h3>
+                <pre><code>let numeros = entrada.split(',').map(n => parseFloat(n.trim()));
+
+for (let i = 0; i < numeros.length; i++) {
+    let numero = numeros[i];
+    console.log(`Tabla del ${numero}:`);
+    
+    for (let j = 1; j <= limite; j++) {
+        let resultado = numero * j;
+        console.log(`${numero} × ${j} = ${resultado}`);
+    }
+}</code></pre>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

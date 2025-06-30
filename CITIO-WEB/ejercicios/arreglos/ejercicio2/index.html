@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2: Contar Elementos Impares</title>
+    <!-- Vinculación con tus CSS -->
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="../../condicionales/index.html">Condicionales</a></li>
+                <li><a href="../../ciclos/index.html">Ciclos</a></li>
+                <li><a href="../../cadenas/index.html">Cadenas</a></li>
+                <li><a href="../../../arreglos/index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 2: Contar Elementos Impares</h1>
+                <p class="ejercicio-description">
+                    Contar cuántos elementos impares hay en un arreglo.
+                </p>
+            </div>
+
+            <!-- Controles -->
+            <div class="controles">
+                <h3>🔢 Opciones para crear el arreglo:</h3>
+                
+                <!-- Opción 1: Entrada manual -->
+                <div class="opcion-entrada">
+                    <h4>📝 Opción 1: Ingresar números manualmente</h4>
+                    <div class="input-manual">
+                        <input type="text" id="numerosInput" placeholder="Ejemplo: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10" maxlength="200">
+                        <small>Separa los números con comas</small>
+                    </div>
+                </div>
+
+                <!-- Opción 2: Generación aleatoria -->
+                <div class="opcion-entrada">
+                    <h4>🎲 Opción 2: Generar números aleatorios</h4>
+                    <div class="input-aleatorio">
+                        <label>Cantidad de números:</label>
+                        <input type="number" id="cantidadNum" min="3" max="20" value="8" placeholder="8">
+                        <label>Rango (1 a):</label>
+                        <input type="number" id="rangoNum" min="10" max="100" value="20" placeholder="20">
+                    </div>
+                </div>
+
+                <div class="botones">
+                    <button id="contarBtn" onclick="contarImpares()">🔍 Contar Impares</button>
+                    <button id="aleatorioBtn" onclick="generarAleatorio()">🎲 Generar Aleatorio</button>
+                    <button id="limpiarBtn" onclick="limpiar()">🧹 Limpiar</button>
+                    <button id="ejemploBtn" onclick="cargarEjemplo()">💡 Ejemplo</button>
+                </div>
+            </div>
+
+            <!-- Resultado -->
+            <div class="resultado" id="resultado">
+                <h3>💡 ¿Cómo funciona este ejercicio?</h3>
+                <div class="explicacion">
+                    <p><strong>¿Qué es un número impar?</strong> Un número impar es aquel que NO es divisible entre 2, es decir, al dividirlo entre 2 deja un residuo de 1.</p>
+                    <p><strong>Proceso:</strong></p>
+                    <ul>
+                        <li>📝 Crear un arreglo con números</li>
+                        <li>🔄 Recorrer cada elemento del arreglo</li>
+                        <li>🧮 Verificar si cada número es impar (número % 2 !== 0)</li>
+                        <li>📊 Contar los números impares encontrados</li>
+                    </ul>
+                    <p><strong>Ejemplo:</strong> En el arreglo [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] hay 5 números impares: 1, 3, 5, 7, 9</p>
+                    <div class="logica-ejercicio">
+                        <h4>🔧 Lógica del Ejercicio:</h4>
+                        <pre><code>let contador = 0;
+for (let i = 0; i < arreglo.length; i++) {
+    if (arreglo[i] % 2 !== 0) {
+        contador++;
+    }
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

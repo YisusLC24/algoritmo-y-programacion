@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3: Suma de Números Naturales</title>
+    <!-- Vinculación con tus CSS -->
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="../../condicionales/index.html">Condicionales</a></li>
+                <li><a href="../../ciclos/index.html">Ciclos</a></li>
+                <li><a href="../../cadenas/index.html">Cadenas</a></li>
+                <li><a href="../../arreglos/index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 3: Suma de Números Naturales</h1>
+                <p class="ejercicio-description">
+                    Pedir un número y mostrar la suma de los primeros N números naturales usando un ciclo for.
+                </p>
+            </div>
+
+            <!-- Área de Interacción -->
+            <div class="ejercicio-content">
+                <div class="input-section">
+                    <label for="numeroInput">Ingresa un número (N):</label>
+                    <input type="number" id="numeroInput" placeholder="Ejemplo: 5" min="1" max="1000">
+                    <button id="calcularBtn" class="btn-primary">Calcular Suma</button>
+                    <button id="limpiarBtn" class="btn-secondary">Limpiar</button>
+                </div>
+
+                <!-- Resultado -->
+                <div class="resultado-section">
+                    <h3>Resultado:</h3>
+                    <div id="resultado" class="resultado-box">
+                        <p class="hint">🔢 Ingresa un número para calcular la suma de los primeros N números naturales</p>
+                        <p class="ejemplo">💡 ¿Qué son los números naturales?</p>
+                        <p>📝 Los números naturales son: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10...</p>
+                        <p>➕ Ejemplo: Si N=5, suma = 1+2+3+4+5 = 15</p>
+                        <p>🎯 ¡Prueba con diferentes valores!</p>
+                    </div>
+                </div>
+
+                <!-- ¿Cómo funciona este ejercicio? -->
+                <div class="logica-section">
+                    <h3>💡 Lógica del Ejercicio:</h3>
+                    <div class="codigo-ejemplo">
+                        <pre><code>let n = parseInt(prompt("Ingresa un número"));
+let suma = 0;
+for (let i = 1; i <= n; i++) {
+    suma += i;
+}
+console.log("La suma es: " + suma);</code></pre>
+                    </div>
+                    <div class="explicacion">
+                        <p><strong>Explicación:</strong></p>
+                        <ul>
+                            <li><strong>Variable suma:</strong> Inicializada en 0 para acumular</li>
+                            <li><strong>Ciclo for:</strong> i va desde 1 hasta N</li>
+                            <li><strong>Acumulación:</strong> suma += i (suma = suma + i)</li>
+                            <li><strong>Resultado:</strong> La suma total de 1+2+3+...+N</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Vinculación con tu JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

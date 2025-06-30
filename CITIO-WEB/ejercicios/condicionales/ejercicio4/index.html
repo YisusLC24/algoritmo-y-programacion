@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4: Días de la Semana</title>
+    <!-- Vinculación con tus CSS -->
+    <link rel="stylesheet" href="../../../../CSS/main.css">
+    <link rel="stylesheet" href="../../../../CSS/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../../../index.html">Inicio</a></li>
+                <li><a href="../../../index.html">Condicionales</a></li>
+                <li><a href="../../ciclos/index.html">Ciclos</a></li>
+                <li><a href="../../cadenas/index.html">Cadenas</a></li>
+                <li><a href="../../arreglos/index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 4: Días de la Semana</h1>
+                <p class="ejercicio-description">
+                    📅 Pedir el día de la semana y decir si es fin de semana (sábado o domingo) o entre semana (lunes-viernes).
+                </p>
+            </div>
+
+            <!-- Contenido del Ejercicio -->
+            <div class="ejercicio-content">
+                <!-- Sección de Input -->
+                <div class="input-section">
+                    <label for="dia">Selecciona o escribe el día de la semana:</label>
+                    <select id="diaSelect" onchange="actualizarInput()">
+                        <option value="">-- Selecciona un día --</option>
+                        <option value="lunes">Lunes</option>
+                        <option value="martes">Martes</option>
+                        <option value="miércoles">Miércoles</option>
+                        <option value="jueves">Jueves</option>
+                        <option value="viernes">Viernes</option>
+                        <option value="sábado">Sábado</option>
+                        <option value="domingo">Domingo</option>
+                    </select>
+                    
+                    <label for="dia">O escribe el día:</label>
+                    <input 
+                        type="text" 
+                        id="dia" 
+                        placeholder="Ejemplo: lunes, martes, etc." 
+                        style="text-transform: lowercase;">
+                </div>
+
+                <div class="button-group">
+                    <button onclick="clasificarDia()" class="btn-primary">
+                        <span>📅</span> Clasificar Día
+                    </button>
+                    <button onclick="limpiar()" class="btn-secondary">
+                        <span>🧹</span> Limpiar
+                    </button>
+                </div>
+
+                <!-- Sección de Resultado -->
+                <div class="resultado-section">
+                    <h3>Resultado:</h3>
+                    <div id="resultado" class="resultado-box">
+                        <p>📅 Selecciona o escribe un día para ver si es fin de semana o entre semana</p>
+                    </div>
+                </div>
+
+                <!-- Sección de Información -->
+                <div class="info-section">
+                    <h4>🤔 ¿Cómo funciona este ejercicio?</h4>
+                    <div class="info-content">
+                        <div class="info-grid">
+                            <div class="info-card">
+                                <h5>🎉 Fin de Semana</h5>
+                                <p><strong>Sábado y Domingo</strong></p>
+                                <small>¡Tiempo de descanso y diversión!</small>
+                            </div>
+                            <div class="info-card">
+                                <h5>💼 Entre Semana</h5>
+                                <p><strong>Lunes a Viernes</strong></p>
+                                <small>Días de trabajo y estudio</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calendario Visual -->
+                <div class="info-section">
+                    <h4>📅 Calendario Semanal:</h4>
+                    <div class="calendario-semana">
+                        <div class="dia-semana entre-semana">
+                            <span class="dia-nombre">LUN</span>
+                            <span class="dia-numero">💼</span>
+                        </div>
+                        <div class="dia-semana entre-semana">
+                            <span class="dia-nombre">MAR</span>
+                            <span class="dia-numero">💼</span>
+                        </div>
+                        <div class="dia-semana entre-semana">
+                            <span class="dia-nombre">MIÉ</span>
+                            <span class="dia-numero">💼</span>
+                        </div>
+                        <div class="dia-semana entre-semana">
+                            <span class="dia-nombre">JUE</span>
+                            <span class="dia-numero">💼</span>
+                        </div>
+                        <div class="dia-semana entre-semana">
+                            <span class="dia-nombre">VIE</span>
+                            <span class="dia-numero">💼</span>
+                        </div>
+                        <div class="dia-semana fin-semana">
+                            <span class="dia-nombre">SÁB</span>
+                            <span class="dia-numero">🎉</span>
+                        </div>
+                        <div class="dia-semana fin-semana">
+                            <span class="dia-nombre">DOM</span>
+                            <span class="dia-numero">🎉</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lógica del Ejercicio -->
+                <div class="info-section">
+                    <h4>🧠 Lógica del Ejercicio:</h4>
+                    <div class="logic-content">
+                        <pre><code>if (dia === "sábado" || dia === "domingo") {
+    clasificacion = "Fin de Semana";
+} else if (diasEntresemana.includes(dia)) {
+    clasificacion = "Entre Semana";
+} else {
+    // Día no válido
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Lógica de Programación - Ejercicios Interactivos</p>
+            <p>Desarrollado con ❤️ para aprender programación</p>
+        </div>
+    </footer>
+
+    <!-- Vinculación con JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

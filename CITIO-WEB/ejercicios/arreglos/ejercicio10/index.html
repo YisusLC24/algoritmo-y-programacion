@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10: Sumar Dos Arreglos</title>
+    <!-- Vinculación con tus CSS -->
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="../../condicionales/index.html">Condicionales</a></li>
+                <li><a href="../../ciclos/index.html">Ciclos</a></li>
+                <li><a href="../../cadenas/index.html">Cadenas</a></li>
+                <li><a href="../index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 10: Sumar Dos Arreglos</h1>
+                <p class="ejercicio-description">
+                    Dado dos arreglos de la misma cantidad de elementos sumarlos en un tercer arreglo y presentar ese nuevo arreglo
+                </p>
+            </div>
+
+            <!-- Entrada de datos -->
+            <div class="input-section">
+                <div class="dual-input">
+                    <div class="input-group">
+                        <label for="array1Input">Primer Arreglo (números separados por comas):</label>
+                        <input type="text" id="array1Input" placeholder="Ejemplo: 1,2,3,4,5" onkeypress="if(event.key==='Enter') document.getElementById('array2Input').focus()">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="array2Input">Segundo Arreglo (números separados por comas):</label>
+                        <input type="text" id="array2Input" placeholder="Ejemplo: 6,7,8,9,10" onkeypress="if(event.key==='Enter') sumarArreglos()">
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button onclick="sumarArreglos()" class="btn-primary">➕ Sumar Arreglos</button>
+                    <button onclick="limpiar()" class="btn-secondary">🧹 Limpiar</button>
+                </div>
+            </div>
+
+            <!-- Resultado -->
+            <div id="resultado" class="resultado">
+                <div class="info-icon">➕</div>
+                <div class="info-text">Ingresa dos arreglos de la misma longitud para sumarlos</div>
+            </div>
+
+            <!-- Explicación del ejercicio -->
+            <div class="explicacion">
+                <h3>➕ ¿Cómo funciona este ejercicio?</h3>
+                <div class="explicacion-content">
+                    <p><strong>¿Qué es sumar arreglos?</strong> Es crear un tercer arreglo donde cada elemento es la suma de los elementos correspondientes de los dos arreglos originales.</p>
+                    
+                    <h4>Proceso:</h4>
+                    <ul>
+                        <li>📊 Verificar que ambos arreglos tengan la misma cantidad de elementos</li>
+                        <li>🔢 Recorrer cada posición de los arreglos</li>
+                        <li>➕ Sumar los elementos de la misma posición</li>
+                        <li>📋 Guardar el resultado en el tercer arreglo</li>
+                        <li>📈 Mostrar la operación completa</li>
+                    </ul>
+                    
+                    <p><strong>Ejemplo:</strong> [1,2,3] + [4,5,6] = [5,7,9]</p>
+                    <p><strong>Fórmula:</strong> resultado[i] = arreglo1[i] + arreglo2[i]</p>
+                </div>
+            </div>
+
+            <!-- Lógica del Ejercicio -->
+            <div class="logica-ejercicio">
+                <h3>🧠 Lógica del Ejercicio:</h3>
+                <pre><code>let arreglo1 = [1, 2, 3, 4, 5];
+let arreglo2 = [6, 7, 8, 9, 10];
+let arregloSuma = [];
+
+// Verificar que tengan la misma longitud
+if (arreglo1.length === arreglo2.length) {
+    for (let i = 0; i < arreglo1.length; i++) {
+        arregloSuma[i] = arreglo1[i] + arreglo2[i];
+    }
+    console.log("Resultado:", arregloSuma); // [7, 9, 11, 13, 15]
+}</code></pre>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

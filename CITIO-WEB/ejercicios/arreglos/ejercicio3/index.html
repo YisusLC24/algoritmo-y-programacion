@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3: Contar Mayores de Edad</title>
+    <!-- Vinculación con tus CSS -->
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="../../condicionales/index.html">Condicionales</a></li>
+                <li><a href="../../ciclos/index.html">Ciclos</a></li>
+                <li><a href="../../cadenas/index.html">Cadenas</a></li>
+                <li><a href="../index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 3: Contar Mayores de Edad</h1>
+                <p class="ejercicio-description">Dado un arreglo de edades, contar cuántos son mayores de edad (18 años o más).</p>
+            </div>
+
+            <!-- Entrada de datos -->
+            <div class="input-section">
+                <label for="edades-input">Ingresa las edades separadas por comas:</label>
+                <input type="text" id="edades-input" placeholder="Ejemplo: 15, 22, 17, 25, 30, 16, 19">
+                <div class="button-group">
+                    <button id="contar-btn" class="btn-primary">🔢 Contar Mayores</button>
+                    <button id="limpiar-btn" class="btn-secondary">🧹 Limpiar</button>
+                </div>
+            </div>
+
+            <!-- Resultado -->
+            <div id="resultado" class="resultado">
+                <!-- Aquí se mostrará el resultado dinámicamente -->
+            </div>
+
+            <!-- Explicación del ejercicio -->
+            <div class="explicacion-section">
+                <h3>💡 ¿Cómo funciona este ejercicio?</h3>
+                <div class="explicacion-content">
+                    <p><strong>¿Qué es mayor de edad?</strong> En la mayoría de países, una persona es mayor de edad a partir de los 18 años.</p>
+                    
+                    <h4>📝 Proceso:</h4>
+                    <ul class="proceso-lista">
+                        <li>🔤 Convertir el texto en un arreglo de números</li>
+                        <li>🔍 Revisar cada edad del arreglo</li>
+                        <li>✅ Contar las edades >= 18</li>
+                        <li>📊 Mostrar el resultado y estadísticas</li>
+                    </ul>
+
+                    <p><strong>Ejemplo:</strong> Edades [15, 22, 17, 25, 30, 16, 19] → Mayores de edad: 4 (22, 25, 30, 19)</p>
+                </div>
+            </div>
+
+            <!-- Lógica del Ejercicio -->
+            <div class="logica-section">
+                <h3>🧠 Lógica del Ejercicio:</h3>
+                <div class="codigo-container">
+                    <pre><code>let edades = [15, 22, 17, 25, 30, 16, 19];
+let mayoresDeEdad = 0;
+
+for (let i = 0; i < edades.length; i++) {
+    if (edades[i] >= 18) {
+        mayoresDeEdad++;
+    }
+}
+
+console.log("Mayores de edad: " + mayoresDeEdad);</code></pre>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

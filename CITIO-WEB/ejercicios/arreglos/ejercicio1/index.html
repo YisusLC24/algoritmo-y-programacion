@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1: Promedio de Arreglo</title>
+    <!-- Vinculación con tus CSS -->
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="../../condicionales/index.html">Condicionales</a></li>
+                <li><a href="../../ciclos/index.html">Ciclos</a></li>
+                <li><a href="../../cadenas/index.html">Cadenas</a></li>
+                <li><a href="../../../arreglos/index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 1: Promedio de Arreglo</h1>
+                <p class="ejercicio-description">
+                    Crear un arreglo con 5 números y mostrar el promedio.
+                </p>
+            </div>
+
+            <!-- Controles -->
+            <div class="controles">
+                <h3>📊 Ingresa 5 números para calcular el promedio:</h3>
+                <div class="input-group">
+                    <input type="number" id="num1" placeholder="Número 1" step="any">
+                    <input type="number" id="num2" placeholder="Número 2" step="any">
+                    <input type="number" id="num3" placeholder="Número 3" step="any">
+                    <input type="number" id="num4" placeholder="Número 4" step="any">
+                    <input type="number" id="num5" placeholder="Número 5" step="any">
+                </div>
+                <div class="botones">
+                    <button id="calcularBtn" onclick="calcularPromedio()">📊 Calcular Promedio</button>
+                    <button id="limpiarBtn" onclick="limpiar()">🧹 Limpiar</button>
+                    <button id="ejemploBtn" onclick="cargarEjemplo()">💡 Ejemplo</button>
+                </div>
+            </div>
+
+            <!-- Resultado -->
+            <div class="resultado" id="resultado">
+                <h3>💡 ¿Cómo funciona este ejercicio?</h3>
+                <div class="explicacion">
+                    <p><strong>¿Qué es un promedio?</strong> El promedio es la suma de todos los números dividida entre la cantidad de números.</p>
+                    <p><strong>Proceso:</strong></p>
+                    <ul>
+                        <li>📝 Crear un arreglo con los 5 números</li>
+                        <li>➕ Sumar todos los elementos del arreglo</li>
+                        <li>➗ Dividir la suma entre la cantidad de elementos (5)</li>
+                        <li>📊 Mostrar el resultado</li>
+                    </ul>
+                    <p><strong>Ejemplo:</strong> Los números [10, 20, 30, 40, 50] tienen un promedio de 30</p>
+                    <div class="logica-ejercicio">
+                        <h4>🔧 Lógica del Ejercicio:</h4>
+                        <pre><code>let numeros = [num1, num2, num3, num4, num5];
+let suma = 0;
+for (let i = 0; i < numeros.length; i++) {
+    suma += numeros[i];
+}
+let promedio = suma / numeros.length;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

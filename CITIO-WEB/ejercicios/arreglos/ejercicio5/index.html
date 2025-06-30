@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5: Concatenar Arreglo de Palabras</title>
+    <!-- Vinculación con tus CSS -->
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="../../condicionales/index.html">Condicionales</a></li>
+                <li><a href="../../ciclos/index.html">Ciclos</a></li>
+                <li><a href="../../cadenas/index.html">Cadenas</a></li>
+                <li><a href="../../../arreglos/index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 5: Concatenar Arreglo de Palabras</h1>
+                <p class="ejercicio-description">
+                    Concatenar todos los elementos de un arreglo de palabras en una sola frase.
+                </p>
+            </div>
+
+            <!-- Área de Input -->
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="palabrasInput">Ingresa las palabras (separadas por comas):</label>
+                    <input type="text" id="palabrasInput" placeholder="Ejemplo: Hola, mundo, desde, JavaScript">
+                </div>
+                
+                <div class="input-group">
+                    <label for="separadorInput">Separador entre palabras:</label>
+                    <select id="separadorInput">
+                        <option value=" ">Espacio ( )</option>
+                        <option value="">Sin separador</option>
+                        <option value="-">Guión (-)</option>
+                        <option value="_">Guión bajo (_)</option>
+                        <option value=", ">Coma y espacio (, )</option>
+                        <option value=" | ">Barra vertical ( | )</option>
+                        <option value="custom">Personalizado...</option>
+                    </select>
+                    <input type="text" id="separadorCustom" placeholder="Ingresa tu separador" style="display: none; margin-top: 10px;">
+                </div>
+
+                <div class="button-group">
+                    <button id="concatenarBtn" class="btn-primary">🔗 Concatenar Palabras</button>
+                    <button id="limpiarBtn" class="btn-secondary">🧹 Limpiar</button>
+                </div>
+            </div>
+
+            <!-- Resultado -->
+            <div id="resultado" class="resultado">
+                <div class="info-icon">💡</div>
+                <div class="info-text">Ingresa un arreglo de palabras para concatenar</div>
+                
+                <div class="explicacion">
+                    <h3>¿Cómo funciona este ejercicio?</h3>
+                    <p><strong>¿Qué es concatenar?</strong> Concatenar significa unir o enlazar elementos uno tras otro para formar una secuencia continua.</p>
+                    
+                    <h4>Proceso:</h4>
+                    <ul class="proceso-lista">
+                        <li>📝 Crear el arreglo de palabras</li>
+                        <li>🔗 Definir el separador a usar</li>
+                        <li>🔄 Recorrer cada palabra del arreglo</li>
+                        <li>➕ Unir cada palabra con el separador</li>
+                        <li>📋 Mostrar la frase final concatenada</li>
+                    </ul>
+                    
+                    <div class="ejemplo">
+                        <strong>Ejemplo:</strong> Arreglo ["Hola", "mundo", "desde", "JavaScript"]
+                        <br>Con separador espacio: "Hola mundo desde JavaScript"
+                        <br>Con separador guión: "Hola-mundo-desde-JavaScript"
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lógica del Ejercicio -->
+            <div class="logica-section">
+                <h3>🧠 Lógica del Ejercicio:</h3>
+                <div class="codigo-container">
+                    <pre class="codigo">
+let palabras = ["Hola", "mundo", "desde", "JavaScript"];
+let separador = " ";
+let fraseCompleta = "";
+
+// Método 1: Usando ciclo for
+for (let i = 0; i < palabras.length; i++) {
+    if (i === 0) {
+        fraseCompleta = palabras[i];
+    } else {
+        fraseCompleta += separador + palabras[i];
+    }
+}
+
+// Método 2: Usando join() (más eficiente)
+let fraseCompleta2 = palabras.join(separador);
+
+console.log(fraseCompleta); // "Hola mundo desde JavaScript"
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

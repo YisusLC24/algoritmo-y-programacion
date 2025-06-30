@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4: Comparación de Textos</title>
+    <!-- Vinculación con tus CSS -->
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="../../condicionales/index.html">Condicionales</a></li>
+                <li><a href="../../ciclos/index.html">Ciclos</a></li>
+                <li><a href="../index.html">Cadenas</a></li>
+                <li><a href="../../arreglos/index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 4: Comparación de Textos</h1>
+                <p class="ejercicio-description">Pedir dos textos y decir cuál tiene más letras.</p>
+            </div>
+
+            <!-- Entrada de Datos -->
+            <div class="ejercicio-input">
+                <label for="texto1">Ingresa el primer texto:</label>
+                <input type="text" id="texto1" placeholder="Ejemplo: Hola mundo">
+                
+                <label for="texto2">Ingresa el segundo texto:</label>
+                <input type="text" id="texto2" placeholder="Ejemplo: JavaScript">
+                
+                <div class="ejercicio-buttons">
+                    <button onclick="compararTextos()">🔍 Comparar Textos</button>
+                    <button onclick="limpiar()">🧹 Limpiar</button>
+                </div>
+            </div>
+
+            <!-- Resultado -->
+            <div class="resultado" id="resultado">
+                <p>🔤 Ingresa dos textos para ver la comparación</p>
+                <div class="info-section">
+                    <h3>💡 ¿Cómo funciona este ejercicio?</h3>
+                    <p><strong>¿Qué es comparar textos?</strong> Comparar dos textos significa verificar cuál de ellos tiene más caracteres usando la propiedad <code>.length</code>.</p>
+                    
+                    <div class="proceso">
+                        <h4>📋 Proceso:</h4>
+                        <ul>
+                            <li>🔤 Leer dos textos del usuario</li>
+                            <li>📏 Calcular la longitud de cada texto</li>
+                            <li>⚖️ Comparar las longitudes</li>
+                            <li>📊 Mostrar cuál tiene más letras</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ejemplo">
+                        <h4>🌟 Ejemplo:</h4>
+                        <p>Texto 1: "Hola" (4 letras) vs Texto 2: "JavaScript" (10 letras)</p>
+                        <p>Resultado: "JavaScript" tiene más letras</p>
+                    </div>
+                    
+                    <div class="logica">
+                        <h4>💻 Lógica del Ejercicio:</h4>
+                        <pre><code>let texto1 = prompt("Ingresa el primer texto");
+let texto2 = prompt("Ingresa el segundo texto");
+
+if (texto1.length > texto2.length) {
+    console.log("El primer texto tiene más letras");
+} else if (texto2.length > texto1.length) {
+    console.log("El segundo texto tiene más letras");
+} else {
+    console.log("Ambos textos tienen la misma cantidad de letras");
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

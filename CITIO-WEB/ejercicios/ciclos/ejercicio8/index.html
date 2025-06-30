@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8: Contador de Nombres</title>
+    <!-- Vinculación con CSS - ajustada según estructura de carpetas -->
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="../../condicionales/index.html">Condicionales</a></li>
+                <li><a href="../index.html">Ciclos</a></li>
+                <li><a href="../../cadenas/index.html">Cadenas</a></li>
+                <li><a href="../../arreglos/index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 8: Contador de Nombres hasta "Messi"</h1>
+                <p class="ejercicio-description">
+                    Pedir nombres hasta que el usuario escriba "Messi". Al final presente cuántos nombres ingresó con while
+                </p>
+            </div>
+
+            <!-- Formulario del Ejercicio -->
+            <div class="ejercicio-form">
+                <div class="input-group">
+                    <label for="nombre">Ingresa nombres (escribe "Messi" para terminar):</label>
+                    <input type="text" id="nombre" placeholder="Ejemplo: Juan, María, Pedro...">
+                </div>
+                
+                <div class="button-group">
+                    <button onclick="agregarNombre()" class="btn-primary">➕ Agregar Nombre</button>
+                    <button onclick="reiniciar()" class="btn-secondary">🔄 Reiniciar</button>
+                </div>
+
+                <!-- Estado del juego -->
+                <div class="estado-juego">
+                    <p id="contador">Nombres ingresados: <span class="numero-contador">0</span></p>
+                    <p id="instruccion">💡 Escribe nombres y presiona "Agregar Nombre" o Enter. Escribe "Messi" para terminar.</p>
+                </div>
+            </div>
+
+            <!-- Lista de nombres ingresados -->
+            <div id="listaNombres" class="lista-nombres"></div>
+
+            <!-- Resultado final -->
+            <div id="resultado" class="resultado"></div>
+
+            <!-- Explicación -->
+            <div class="explicacion">
+                <h3>💡 ¿Cómo funciona este ejercicio?</h3>
+                <p>Este ejercicio usa un ciclo <code>while</code> que continúa ejecutándose hasta que se cumple una condición específica.</p>
+                
+                <div class="proceso">
+                    <h4>Proceso:</h4>
+                    <ul>
+                        <li>🔄 Usar ciclo <code>while</code> que continúe hasta que el usuario escriba "Messi"</li>
+                        <li>📝 Pedir nombres uno por uno</li>
+                        <li>🔢 Contar cada nombre ingresado</li>
+                        <li>🛑 Parar cuando aparezca "Messi"</li>
+                        <li>📊 Mostrar el total de nombres ingresados</li>
+                    </ul>
+                </div>
+
+                <div class="codigo-logica">
+                    <h4>🔧 Lógica del Ejercicio:</h4>
+                    <pre><code>let contador = 0;
+let nombre = "";
+let nombres = [];
+
+while (nombre.toLowerCase() !== "messi") {
+    nombre = prompt("Ingresa un nombre:");
+    if (nombre.toLowerCase() !== "messi") {
+        nombres.push(nombre);
+        contador++;
+    }
+}
+
+alert("Total de nombres: " + contador);</code></pre>
+                </div>
+
+                <p><strong>Ejemplo:</strong> Si ingresas: Juan, María, Pedro, Messi → Total: 3 nombres</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

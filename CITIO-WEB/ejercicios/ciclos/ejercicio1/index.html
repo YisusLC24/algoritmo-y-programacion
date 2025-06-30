@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1: Números del 1 al 10</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../index.html">Inicio</a></li>
+                <li><a href="../index.html">Condicionales</a></li>
+                <li><a href="../ciclos/index.html">Ciclos</a></li>
+                <li><a href="../cadenas/index.html">Cadenas</a></li>
+                <li><a href="../arreglos/index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 1: Números del 1 al 10</h1>
+                <p class="ejercicio-description">
+                    Mostrar los números del 1 al 10 usando un ciclo for.
+                </p>
+            </div>
+
+            <!-- Área de Interacción -->
+            <div class="ejercicio-content">
+                <div class="input-section">
+                    <p class="instruction">Haz clic en el botón para ejecutar el ciclo for:</p>
+                    <button id="ejecutarBtn" class="btn-primary">Ejecutar Ciclo</button>
+                    <button id="limpiarBtn" class="btn-secondary">Limpiar</button>
+                </div>
+
+                <!-- Resultado -->
+                <div class="resultado-section">
+                    <h3>Resultado:</h3>
+                    <div id="resultado" class="resultado-box">
+                        <p class="hint">🔢 Presiona "Ejecutar Ciclo" para ver los números del 1 al 10</p>
+                    </div>
+                </div>
+
+                <!-- ¿Cómo funciona este ejercicio? -->
+                <div class="logica-section">
+                    <h3>💡 Lógica del Ejercicio:</h3>
+                    <div class="codigo-ejemplo">
+                        <pre><code>for (let i = 1; i <= 10; i++) {
+    console.log("Número: " + i);
+}</code></pre>
+                    </div>
+                    <div class="explicacion">
+                        <p><strong>Explicación:</strong></p>
+                        <ul>
+                            <li><strong>Inicialización:</strong> i = 1 (comenzamos en 1)</li>
+                            <li><strong>Condición:</strong> i <= 10 (continuamos mientras i sea menor o igual a 10)</li>
+                            <li><strong>Incremento:</strong> i++ (aumentamos i en 1 cada iteración)</li>
+                            <li><strong>Cuerpo:</strong> Mostramos el valor actual de i</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Vinculación con tu JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

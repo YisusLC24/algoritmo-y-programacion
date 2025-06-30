@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9: Copiar Números Pares</title>
+    <!-- Vinculación con tus CSS -->
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="../../condicionales/index.html">Condicionales</a></li>
+                <li><a href="../../ciclos/index.html">Ciclos</a></li>
+                <li><a href="../../cadenas/index.html">Cadenas</a></li>
+                <li><a href="../index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 9: Copiar Números Pares</h1>
+                <p class="ejercicio-description">
+                    Copiar solo los pares de los elementos de un arreglo en otro arreglo
+                </p>
+            </div>
+
+            <!-- Entrada de datos -->
+            <div class="input-section">
+                <label for="arrayInput">Ingresa números separados por comas:</label>
+                <input type="text" id="arrayInput" placeholder="Ejemplo: 1,2,3,4,5,6,7,8" onkeypress="if(event.key==='Enter') procesarArreglo()">
+                <div class="button-group">
+                    <button onclick="procesarArreglo()" class="btn-primary">🔍 Copiar Pares</button>
+                    <button onclick="limpiar()" class="btn-secondary">🧹 Limpiar</button>
+                </div>
+            </div>
+
+            <!-- Resultado -->
+            <div id="resultado" class="resultado">
+                <div class="info-icon">💡</div>
+                <div class="info-text">Ingresa un arreglo para ver los números pares copiados</div>
+            </div>
+
+            <!-- Explicación del ejercicio -->
+            <div class="explicacion">
+                <h3>💡 ¿Cómo funciona este ejercicio?</h3>
+                <div class="explicacion-content">
+                    <p><strong>¿Qué es copiar números pares?</strong> Es crear un nuevo arreglo que contenga únicamente los números pares del arreglo original.</p>
+                    
+                    <h4>Proceso:</h4>
+                    <ul>
+                        <li>🔢 Recorrer cada elemento del arreglo original</li>
+                        <li>✅ Verificar si el número es par (resto de división entre 2 es 0)</li>
+                        <li>📋 Si es par, copiarlo al nuevo arreglo</li>
+                        <li>📊 Mostrar ambos arreglos: original y pares</li>
+                    </ul>
+                    
+                    <p><strong>Ejemplo:</strong> Los números pares de [1,2,3,4,5,6] son: [2,4,6]</p>
+                </div>
+            </div>
+
+            <!-- Lógica del Ejercicio -->
+            <div class="logica-ejercicio">
+                <h3>🧠 Lógica del Ejercicio:</h3>
+                <pre><code>let arregloOriginal = [1, 2, 3, 4, 5, 6, 7, 8];
+let arregloPares = [];
+
+for (let i = 0; i < arregloOriginal.length; i++) {
+    if (arregloOriginal[i] % 2 === 0) {
+        arregloPares.push(arregloOriginal[i]);
+    }
+}
+
+console.log("Arreglo original:", arregloOriginal);
+console.log("Números pares:", arregloPares);</code></pre>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

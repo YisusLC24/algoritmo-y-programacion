@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5: Números Pares</title>
+    <!-- Vinculación con tus CSS -->
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="../../../condicionales/index.html">Condicionales</a></li>
+                <li><a href="../../../ciclos/index.html">Ciclos</a></li>
+                <li><a href="../../../cadenas/index.html">Cadenas</a></li>
+                <li><a href="../../../arreglos/index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 5: Números Pares del 1 al 50</h1>
+                <p class="ejercicio-description">
+                    Mostrar todos los números pares del 1 al 50 usando for.<br>
+                    <strong>¿Qué es un número par?</strong> Un número par es aquel que es divisible entre 2, es decir, cuando se divide entre 2 el residuo es 0.
+                    <br>Ejemplos: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20...
+                </p>
+            </div>
+
+            <!-- Botones de acción -->
+            <div class="ejercicio-form">
+                <button onclick="mostrarPares()">📊 Mostrar Números Pares</button>
+                <button onclick="limpiar()">🗑️ Limpiar</button>
+            </div>
+
+            <!-- Resultado -->
+            <div id="resultado" class="resultado"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

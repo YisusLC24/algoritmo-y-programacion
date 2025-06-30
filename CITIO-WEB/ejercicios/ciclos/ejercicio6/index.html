@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6: Divisores</title>
+    <!-- Vinculación con CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../index.html">Inicio</a></li>
+                <li><a href="../condicionales/index.html">Condicionales</a></li>
+                <li><a href="../ciclos/index.html">Ciclos</a></li>
+                <li><a href="../cadenas/index.html">Cadenas</a></li>
+                <li><a href="../arreglos/index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 6: Divisores de un Número</h1>
+                <p class="ejercicio-description">
+                    Pedir un número y mostrar los divisores con while
+                </p>
+            </div>
+
+            <!-- Formulario del Ejercicio -->
+            <div class="ejercicio-form">
+                <div class="input-group">
+                    <label for="numero">Ingresa un número:</label>
+                    <input type="number" id="numero" placeholder="Ejemplo: 12">
+                </div>
+                
+                <div class="button-group">
+                    <button onclick="encontrarDivisores()" class="btn-primary">🔍 Encontrar Divisores</button>
+                    <button onclick="limpiar()" class="btn-secondary">🗑️ Limpiar</button>
+                </div>
+            </div>
+
+            <!-- Resultado -->
+            <div id="resultado" class="resultado"></div>
+
+            <!-- Explicación -->
+            <div class="explicacion">
+                <h3>💡 ¿Cómo funciona este ejercicio?</h3>
+                <p><strong>¿Qué es un divisor?</strong> Un divisor de un número N es cualquier número que divide a N exactamente (sin residuo).</p>
+                
+                <div class="proceso">
+                    <h4>Proceso:</h4>
+                    <ul>
+                        <li>🔄 Usar ciclo <code>while</code> desde 1 hasta el número ingresado</li>
+                        <li>➗ Verificar si cada número divide exactamente (resto = 0)</li>
+                        <li>👆 Si es divisor, agregarlo a la lista</li>
+                        <li>📋 Mostrar todos los divisores encontrados</li>
+                    </ul>
+                </div>
+
+                <p><strong>Ejemplo:</strong> Los divisores de 12 son: 1, 2, 3, 4, 6, 12</p>
+
+                <div class="codigo-logica">
+                    <h4>🔧 Lógica del Ejercicio:</h4>
+                    <pre><code>let numero = parseInt(prompt("Ingresa un número"));
+let divisor = 1;
+let divisores = [];
+
+while (divisor <= numero) {
+    if (numero % divisor === 0) {
+        divisores.push(divisor);
+    }
+    divisor++;
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script JavaScript -->
+    <script src="sctipt.js"></script>
+</body>
+</html>

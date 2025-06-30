@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8: Cálculo de Bono por Hijos</title>
+    <!-- Vinculación con tus CSS -->
+    <link rel="stylesheet" href="../../../CSS/main.css">
+    <link rel="stylesheet" href="../../../CSS/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="../../index.html">Condicionales</a></li>
+                <li><a href="../../../ciclos/index.html">Ciclos</a></li>
+                <li><a href="../../../cadenas/index.html">Cadenas</a></li>
+                <li><a href="../../../arreglos/index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 8: Cálculo de Bono por Hijos</h1>
+                <p class="ejercicio-description">Calcula el bono familiar basado en el número de hijos y situación laboral</p>
+            </div>
+
+            <!-- Contenido del Ejercicio -->
+            <div class="ejercicio-content">
+                <!-- Sección de Input -->
+                <div class="input-section">
+                    <label for="numHijos">Número de hijos:</label>
+                    <input 
+                        type="number" 
+                        id="numHijos" 
+                        placeholder="Ejemplo: 2" 
+                        min="0" 
+                        max="20"
+                        step="1">
+                    
+                    <label for="tieneEmpleo">¿Tiene empleo actualmente?</label>
+                    <select id="tieneEmpleo">
+                        <option value="">-- Selecciona una opción --</option>
+                        <option value="si">Sí, tengo empleo</option>
+                        <option value="no">No, no tengo empleo</option>
+                    </select>
+                </div>
+
+                <div class="button-group">
+                    <button onclick="calcularBono()" class="btn-primary">
+                        <span>💰</span> Calcular Bono
+                    </button>
+                    <button onclick="limpiar()" class="btn-secondary">
+                        <span>✨</span> Limpiar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sección de Resultado -->
+            <div class="resultado-section">
+                <h3>Resultado:</h3>
+                <div id="resultado" class="resultado-box">
+                    <p>💰 Ingresa el número de hijos y situación laboral para calcular el bono</p>
+                </div>
+            </div>
+
+            <!-- Sección de Información -->
+            <div class="info-section">
+                <h4>🤔 ¿Cómo funciona este ejercicio?</h4>
+                <div class="info-content">
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h5>💼 Con Empleo</h5>
+                            <p><strong>$50 por hijo</strong></p>
+                            <small>Bono para personas con trabajo estable</small>
+                        </div>
+                        <div class="info-card">
+                            <h5>🏠 Sin Empleo</h5>
+                            <p><strong>$30 por hijo</strong></p>
+                            <small>Apoyo social para personas desempleadas</small>
+                        </div>
+                        <div class="info-card">
+                            <h5>👶 Sin Hijos</h5>
+                            <p><strong>$0 de bono</strong></p>
+                            <small>No aplica bono familiar</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lógica del Ejercicio -->
+                <div class="logic-section">
+                    <h4>💡 Lógica del Ejercicio:</h4>
+                    <div class="code-block">
+                        <pre><code>if (numHijos > 0 && tieneEmpleo) {
+    bono = numHijos * 50;
+} else if (numHijos > 0 && !tieneEmpleo) {
+    bono = numHijos * 30;
+} else {
+    bono = 0;
+}</code></pre>
+                    </div>
+                </div>
+
+    <!-- Vinculación con JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

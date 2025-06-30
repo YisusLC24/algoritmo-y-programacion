@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4: Factorial</title>
+    <!-- Vinculación con tus CSS -->
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="../../../condicionales/index.html">Condicionales</a></li>
+                <li><a href="../../../ciclos/index.html">Ciclos</a></li>
+                <li><a href="../../../cadenas/index.html">Cadenas</a></li>
+                <li><a href="../../../arreglos/index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 4: Factorial</h1>
+                <p class="ejercicio-description">
+                    Pedir un número y mostrar su factorial con for.<br>
+                    <strong>¿Qué es un factorial?</strong> El factorial de un número n (n!) es el producto de todos los números enteros positivos desde 1 hasta n.
+                    <br>Ejemplo: 5! = 1 × 2 × 3 × 4 × 5 = 120
+                </p>
+            </div>
+
+            <!-- Formulario -->
+            <div class="ejercicio-form">
+                <label for="numero">Ingresa un número para calcular su factorial:</label>
+                <input type="number" id="numero" placeholder="Ejemplo: 5" min="0" max="15">
+                <button onclick="calcularFactorial()">🧮 Calcular</button>
+                <button onclick="limpiar()">🗑️ Limpiar</button>
+            </div>
+
+            <!-- Resultado -->
+            <div id="resultado" class="resultado"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

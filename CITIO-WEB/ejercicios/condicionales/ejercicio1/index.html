@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1: Clasificación por Edad</title>
+    <!-- Vinculación con tus CSS -->
+    <link rel="stylesheet" href="../../../CSS/main.css">
+    <link rel="stylesheet" href="../../../CSS/ejercicios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Lógica de Programación</h1>
+            <ul class="nav-menu">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="../index.html">Condicionales</a></li>
+                <li><a href="../../ciclos/index.html">Ciclos</a></li>
+                <li><a href="../../cadenas/index.html">Cadenas</a></li>
+                <li><a href="../../arreglos/index.html">Arreglos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="ejercicio-container">
+            <!-- Header del Ejercicio -->
+            <div class="ejercicio-header">
+                <h1 class="ejercicio-title">Ejercicio 1: Clasificación por Edad</h1>
+                <p class="ejercicio-description">
+                    Pedir una edad y mostrar si es niño (0-12), adolescente (13-17), adulto (18-59) o adulto mayor (60+).
+                </p>
+            </div>
+
+            <!-- Contenido del Ejercicio -->
+            <div class="ejercicio-content">
+                <!-- Sección de Input -->
+                <div class="input-section">
+                    <label for="edad">Ingresa tu edad:</label>
+                    <input type="number" 
+                           id="edad" 
+                           placeholder="Ejemplo: 25" 
+                           min="0" 
+                           max="120">
+                    
+                    <div class="button-group">
+                        <button onclick="clasificarEdad()" class="btn-primary">
+                            <span>🔍</span> Clasificar
+                        </button>
+                        <button onclick="limpiar()" class="btn-secondary">
+                            <span>🧹</span> Limpiar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Sección de Resultado -->
+                <div class="resultado-section">
+                    <h3>Resultado:</h3>
+                    <div id="resultado" class="resultado-box">
+                        <p>👋 Ingresa tu edad para ver la clasificación</p>
+                    </div>
+                </div>
+
+                <!-- Sección de Información -->
+                <div class="info-section">
+                    <h4>💡 ¿Cómo funciona este ejercicio?</h4>
+                    <div class="info-content">
+                        <div class="info-grid">
+                            <div class="info-card">
+                                <h5>🧒 Niño</h5>
+                                <p><strong>0 - 12 años</strong></p>
+                                <small>Etapa de crecimiento y aprendizaje</small>
+                            </div>
+                            <div class="info-card">
+                                <h5>🧑‍🎓 Adolescente</h5>
+                                <p><strong>13 - 17 años</strong></p>
+                                <small>Etapa de formación y descubrimiento</small>
+                            </div>
+                            <div class="info-card">
+                                <h5>👩‍💼 Adulto</h5>
+                                <p><strong>18 - 59 años</strong></p>
+                                <small>Etapa productiva y de responsabilidades</small>
+                            </div>
+                            <div class="info-card">
+                                <h5>👴 Adulto Mayor</h5>
+                                <p><strong>60+ años</strong></p>
+                                <small>Etapa de experiencia y sabiduría</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección de Código -->
+                <div class="codigo-section">
+                    <h4>📝 Lógica del Ejercicio:</h4>
+                    <div class="codigo-contenido">
+                        <pre><code>if (edad >= 0 && edad <= 12) {
+    clasificacion = "Niño/a";
+} else if (edad >= 13 && edad <= 17) {
+    clasificacion = "Adolescente";
+} else if (edad >= 18 && edad <= 59) {
+    clasificacion = "Adulto/a";
+} else if (edad >= 60) {
+    clasificacion = "Adulto Mayor";
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Lógica de Programación - Ejercicios Interactivos</p>
+            <p>Desarrollado con ❤️ para aprender programación</p>
+        </div>
+    </footer>
+
+    <!-- Vinculación con JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
